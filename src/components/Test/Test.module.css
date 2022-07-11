@@ -1,0 +1,21 @@
+.Test {
+
+    /*color: orange;*/
+}
+
+
+.jeremyUl {
+    color: red;
+    list-style-type: none;
+    /*margin: 0;*/
+    margin-left: 5%;
+
+    padding: 0;
+
+}
+
+.jeremyLi {
+    /*margin: 0;*/
+    /*padding: 0;*/
+
+}

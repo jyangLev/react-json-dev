@@ -1,0 +1,29 @@
+.Collections {}
+
+
+
+.jeremy-class{
+
+    color: green;
+}
+
+#jeremy-id{
+
+    color:red;
+
+}
+
+/*.jeremy{*/
+/*    margin-left: 10%;*/
+/*}*/
+
+.jeremyBtn {
+    cursor: default;
+    transition: none !important;
+    margin-left: 1VW;
+    padding: 0;
+
+    text-align: left;
+
+}
+
