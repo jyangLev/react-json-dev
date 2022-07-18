@@ -20,17 +20,7 @@ const CollectionsV2 = () => {
     return (
 
         <div>
-            {/*-----Start 1------*/}
-            {/*{parentElement}*/}
-            {/*{childElement}*/}
-            {/*{folderIcon}*/}
-            {/*------End 1------*/}
-
-            *******START******
-
             {nodes}
-
-
         </div>
     );
 }
