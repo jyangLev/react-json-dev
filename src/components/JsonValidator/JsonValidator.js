@@ -21,6 +21,8 @@ import './JsonValidator.css';
 import Collections from "../Collections/Collections";
 import JsonEditor from "../JsonEditor/JsonEditor";
 import Test from "../Test/Test";
+import Directory from "../Recursion/Directory";
+import files from "../../files.json";
 
 
 function JsonValidator() {
@@ -30,8 +32,7 @@ function JsonValidator() {
                 <div className="row ">
                     <div className='p-2 col background '>
                         <Collections />
-                        <Test></Test>
-
+                        <Directory files={files} />
                     </div>
                     <div className="p-2 col-6 background">
                         <div className="mb-3">
