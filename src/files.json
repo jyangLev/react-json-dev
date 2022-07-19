@@ -6,14 +6,16 @@
             "name": "src-folder",
             "type": "folder",
             "items": [
-                {
-                    "name": "file.css",
-                    "type": "file"
-                },
+
                 {
                     "name": "components-folder",
                     "type": "folder",
                     "items": [
+                        {
+                            "name": "Checkbox-Folder",
+                            "type": "folder",
+                            "items":[]
+                        },
                         {
                             "name": "Checkbox.jsx",
                             "type": "file"
@@ -33,6 +35,10 @@
                             "type": "file"
                         }
                     ]
+                },
+                {
+                    "name": "file.css",
+                    "type": "file"
                 }
             ]
         }

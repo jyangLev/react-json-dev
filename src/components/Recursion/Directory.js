@@ -1,39 +1,31 @@
 import React, {useState} from 'react';
-import {FileText, Folder} from "react-feather";
-import styles from "../Collections/Collections.module.css";
+import {ChevronDown, ChevronRight, FileText, Folder} from "react-feather";
+// import styles from "../Collections/Collections.module.css";
+import styles from "../Recursion/Directory.module.css";
 
-
-
-const Directory = ({ files }) => {
+const Directory = ({files}) => {
     const [isExpanded, toggleExpanded] = useState(false);
-
     if (files.type === 'folder') {
-        {/*
-                {`collapse collapse5 ${styles.jeremyBtn}`}
-        */}
         return (
-            // <div className="folder">
             <div className={`folder ${styles.jeremyBtn}`}>
-            {/*<FileText color="red" size={14}/>*/}
-
-
                 <div className="folder-title" onClick={() => toggleExpanded(!isExpanded)}>
-                    <Folder color="red" size={14}/>
-
+                    {isExpanded
+                        ? <ChevronDown className={styles.iconGap} color="black" size={14}/>
+                        : <ChevronRight className={`${styles.iconGap}`} color="black" size={14}/>
+                    }
+                    <Folder className={styles.iconGap} color="blue" size={14}/>
                     {files.name}
                 </div>
                 {
-                    isExpanded && files.items.map((item) => <Directory files={item} />)
+                    isExpanded && files.items.map((item) => <Directory files={item}/>)
                 }
             </div>
         )
     }
     return (
         <>
-            {/*<div className="file-name">*/}
-            <div className={`file-name ${styles.jeremyBtn}`}>
-
-            <FileText color="red" size={14}/>
+            <div className={`file-name ${styles.jeremyBtn} `}>
+                <FileText className={styles.iconGap} color="blue" size={14}/>
                 {files.name}</div>
         </>
     )

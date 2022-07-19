@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Add Recursion Logic for folder structure">
-      <change afterPath="$PROJECT_DIR$/src/components/Recursion/Directory.module.css" afterDir="false" />
+    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Directory Component working with Folder Structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Collections/Collections.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Collections/Collections.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Collections/Collections.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Collections/Collections.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JsonEditor/JSONEditorDemo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonEditor/JSONEditorDemo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JsonEditor/JSONEditorDemo1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonEditor/JSONEditorDemo1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JsonEditor/JsonEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonEditor/JsonEditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JsonValidator/JsonValidator.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonValidator/JsonValidator.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/JsonValidator/JsonValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonValidator/JsonValidator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Recursion/Directory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recursion/Directory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recursion/Directory.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recursion/Directory.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/files.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +50,7 @@
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -64,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658180179111</updated>
       <workItem from="1658180180543" duration="57000" />
-      <workItem from="1658180243512" duration="2831000" />
+      <workItem from="1658180243512" duration="8227000" />
     </task>
     <task id="LOCAL-00001" summary="readd .idea files">
       <created>1658180225739</created>
@@ -80,11 +84,29 @@
       <option name="project" value="LOCAL" />
       <updated>1658183618953</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Directory Component working with Folder Structure">
+      <created>1658184978259</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658184978259</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -101,6 +123,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="readd .idea files" />
     <MESSAGE value="Add Recursion Logic for folder structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Recursion Logic for folder structure" />
+    <MESSAGE value="Directory Component working with Folder Structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Directory Component working with Folder Structure" />
   </component>
 </project>
