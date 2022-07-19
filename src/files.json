@@ -1,0 +1,48 @@
+{
+    "name": "Root-Folder",
+    "type": "folder",
+    "items": [
+        {
+            "name": "src-folder",
+            "type": "folder",
+            "items": [
+
+                {
+                    "name": "components-folder",
+                    "type": "folder",
+                    "items": [
+                        {
+                            "name": "Checkbox-Folder",
+                            "type": "folder",
+                            "items":[]
+                        },
+                        {
+                            "name": "Checkbox.jsx",
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "pages-folder",
+                    "type": "folder",
+                    "items": [
+                        {
+                            "name": "file1.jsx",
+                            "type": "file"
+                        },
+                        {
+                            "name": "file2.jsx",
+                            "type": "file"
+                        }
+                    ]
+                },
+                {
+                    "name": "file.css",
+                    "type": "file"
+                }
+            ]
+        }
+
+    ]
+
+}

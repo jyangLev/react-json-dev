@@ -1,14 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Directory Component working with Folder Structure">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JsonEditor/JSONEditorDemo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonEditor/JSONEditorDemo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JsonEditor/JSONEditorDemo1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonEditor/JSONEditorDemo1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JsonEditor/JsonEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonEditor/JsonEditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JsonValidator/JsonValidator.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonValidator/JsonValidator.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JsonValidator/JsonValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonValidator/JsonValidator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recursion/Directory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recursion/Directory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recursion/Directory.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recursion/Directory.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/files.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2C8NJGjiHzvvLvWGxesdA2Qnk6R" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/jeremytouch/IdeaProjects/react-json-dev/src/components/Recursion",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Recursion" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="" />
+      <created>1658180179111</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1658180179111</updated>
+      <workItem from="1658180180543" duration="57000" />
+      <workItem from="1658180243512" duration="8227000" />
+    </task>
+    <task id="LOCAL-00001" summary="readd .idea files">
+      <created>1658180225739</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1658180225739</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add Recursion Logic for folder structure">
+      <created>1658183618953</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658183618953</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Directory Component working with Folder Structure">
+      <created>1658184978259</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658184978259</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="readd .idea files" />
+    <MESSAGE value="Add Recursion Logic for folder structure" />
+    <MESSAGE value="Directory Component working with Folder Structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Directory Component working with Folder Structure" />
   </component>
 </project>

@@ -1,9 +1,6 @@
 import {useState} from "react";
 import JSONEditorDemo1 from "./JSONEditorDemo1";
 import "./JSONEditorDemo.css";
-import Test from "../Test/Test";
-import CollectionsV2 from "../CollectionsV2/CollectionsV2";
-
 export default function JsonEditor() {
 
     var jsonBodyString = {
@@ -24,13 +21,6 @@ export default function JsonEditor() {
                     setJSON(json);
                 }}
             />
-            Collection V2
-
-            <Test></Test>
-
-            <CollectionsV2/>
-
-
         </div>
     );
 }
