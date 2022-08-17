@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Directory Component working with Folder Structure">
-      <change afterPath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.module.css" afterDir="false" />
+    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Directory Component fixed styling and added icons">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Collections/Collections.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Collections/Collections.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CollectionsV2/CollectionsV2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CollectionsV2/CollectionsV2.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/JsonValidator/JsonValidator.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/JsonValidator/JsonValidator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/JsonValidator/JsonValidator.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Test/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Test/Test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recursion/Directory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recursion/Directory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recursion/Directory.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Recursion/Directory.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +19,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="jeremyBranch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,6 +56,23 @@
       <recent name="$PROJECT_DIR$/src/components/Recursion" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -78,6 +86,7 @@
       <workItem from="1658348531837" duration="1189000" />
       <workItem from="1658503615137" duration="23000" />
       <workItem from="1658503646085" duration="3104000" />
+      <workItem from="1660231458092" duration="13098000" />
     </task>
     <task id="LOCAL-00001" summary="readd .idea files">
       <created>1658180225739</created>
@@ -134,5 +143,17 @@
     <MESSAGE value="Add Recursion Logic for folder structure" />
     <MESSAGE value="Directory Component working with Folder Structure" />
     <option name="LAST_COMMIT_MESSAGE" value="Directory Component working with Folder Structure" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/Recursion/Directory.js</url>
+          <line>41</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
