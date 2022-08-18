@@ -1,21 +1,31 @@
 .Test {
+    background-color: #b8f8f8;
+    position: static;
 
-    /*color: orange;*/
-}
-
-
-.jeremyUl {
-    color: red;
-    list-style-type: none;
-    /*margin: 0;*/
-    margin-left: 5%;
-
+    cursor: default;
+    transition: none !important;
+    /*margin-left: 1VW;*/
     padding: 0;
+    text-align: left;
+}
+
+.folderContainer {
+    /*position: static;*/
+    width: 100%;
+    padding-left: 10px;
+
 
 }
 
-.jeremyLi {
-    /*margin: 0;*/
-    /*padding: 0;*/
+.folderChild {
+    position: absolute;
 
+}
+
+.jeremyBtn {
+    cursor: default;
+    transition: none !important;
+    /*margin-left: 1VW;*/
+    padding: 0;
+    text-align: left;
 }

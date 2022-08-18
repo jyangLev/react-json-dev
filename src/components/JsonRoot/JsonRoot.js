@@ -12,14 +12,14 @@ const JsonRoot = () => (
       <div>
           <div className="container-fluid">
               <div className="row ">
-                  <div className='p-2 col background ' style={{position:"relative"}}>
+                  <div className='p-2 col background '>
                       {/*<Collections />*/}
-                      <Directory files={files} />
+                      {/*<Directory files={files} />*/}
+                      <Test files={files}/>
                   </div>
                   <div className="p-2 col-10 background">
                       <div className="mb-3">
                           <JsonEditor></JsonEditor>
-                          {/*<Test jeremyState={setJeremyState}/>*/}
                       </div>
                   </div>
                   {/*<div className="p-2 col background ">*/}
