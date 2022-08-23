@@ -1,33 +1,30 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {ChevronDown, ChevronRight, FileText, Folder} from "react-feather";
 // import styles from "../Collections/Collections.module.css";
+import files from "../../files.json";
+
 import styles from "../Recursion/Directory.module.css";
-
-const Directory = ({files, itemName, onClick, active}) => {
-
-    console.log("Active: " + active)
-    console.log("itemName: " + itemName)
-    console.log("++++++++++++++++++++")
+import {useRef} from "react";
+import {v4 as uuid} from 'uuid';
 
 
+const Directory = ({files, itemName, active}) => {
+
+    const ref = useRef(null);
     const [chosen, setChosen] = useState();
-
     const [isExpanded, toggleExpanded] = useState(false);
 
-    // const isActive = active ? 'active' : styles.nonActive;
-
-
     if (files.type === 'folder') {
+        debugger;
         return (
-            // <div className={`folder ${styles.jeremyBtn} ${active ? styles.active : styles.nonActive}`}>
-            <div  className={`folder ${styles.jeremyBtn} `}>
+            <div id={"folderContainer_" + uuid().slice(0, 8)} ref={ref}
+                 className={`folderContainer ${styles.jeremyBtn} `}>
 
 
-                {/*<div className={`folderTitle ${active ? styles.active : styles.nonActive}`} onClick={() => helperOnClick(!isExpanded, onClick)}>*/}
-                <div className={`folderTitle ${active ? styles.active : ''}`} onClick={() => helperOnClick(!isExpanded, onClick)}>
+                <div id={"folderTitle_" + uuid().slice(0, 8)} className={`folderTitle ${active ? styles.active : ''}`}
+                     onClick={(event) => helperOnClick(event, !isExpanded)}>
 
-
-                {isExpanded
+                    {isExpanded
                         ? <ChevronDown className={styles.iconGap} color="black" size={14}/>
                         : <ChevronRight className={`${styles.iconGap}`} color="black" size={14}/>
                     }
@@ -37,10 +34,11 @@ const Directory = ({files, itemName, onClick, active}) => {
                 {
 
                     isExpanded && files.items.map(
-                        (item) => <Directory files={item}
-                                             itemName={item.name}
-                                             active={item.name === chosen}
-                                             onClick={() => setChosen(item.name)}
+                        (item, index) => <Directory files={item}
+                                                    itemName={item.name}
+                                                    active={item.name === chosen}
+                                                    onClick={() => setChosen(item.name)}
+                                                    key={index}
                         />
                     )
 
@@ -52,15 +50,16 @@ const Directory = ({files, itemName, onClick, active}) => {
     }
     return (
         <>
-            <div className={`file-name ${styles.jeremyBtn} ${active ? styles.active : ''}`}>
+            <div id={"fileName_" + uuid().slice(0, 8)} ref={ref}
+                 className={`file-name ${styles.jeremyBtn} ${active ? styles.active : ''}`}>
                 <FileText className={styles.iconGap} color="blue" size={14}/>
                 {files.name}</div>
         </>
     )
 
-    function helperOnClick(isExpanded, onClick) {
+
+    function helperOnClick(event, isExpanded) {
         toggleExpanded(isExpanded)
-        onClick();
     }
 }
 

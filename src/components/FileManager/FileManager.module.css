@@ -1,0 +1,30 @@
+.FileManager {}
+
+.jeremyBtn {
+    cursor: default;
+    transition: none !important;
+    /*margin-left: 1VW;*/
+    padding: 0;
+    text-align: left;
+}
+
+.jeremyBtn:not(:first-child) {
+    margin-left: 1VW;
+}
+
+
+.iconGap{
+    margin-right: .2VW;
+
+}
+
+.active{
+    background-color: green;
+    color: white;
+
+}
+
+.nonActive{
+    background-color: purple;
+    color: white;
+}

@@ -5,6 +5,7 @@ import Directory from "../Recursion/Directory";
 import files from "../../files.json";
 import JsonEditor from "../JsonEditor/JsonEditor";
 import Test from "../Test/Test";
+import FileManager from "../FileManager/FileManager";
 
 const JsonRoot = () => (
 
@@ -13,13 +14,12 @@ const JsonRoot = () => (
           <div className="container-fluid">
               <div className="row ">
                   <div className='p-2 col background ' style={{position:"relative"}}>
-                      {/*<Collections />*/}
-                      <Directory files={files} />
+                      {/*<Directory files={files} />*/}
+                      <FileManager files={files}/>
                   </div>
                   <div className="p-2 col-10 background">
                       <div className="mb-3">
                           <JsonEditor></JsonEditor>
-                          {/*<Test jeremyState={setJeremyState}/>*/}
                       </div>
                   </div>
                   {/*<div className="p-2 col background ">*/}
@@ -31,9 +31,5 @@ const JsonRoot = () => (
           </div>
       </div>  </div>
 );
-
-JsonRoot.propTypes = {};
-
-JsonRoot.defaultProps = {};
 
 export default JsonRoot;
