@@ -68,20 +68,32 @@ const FileManager = () => {
         return (
             <>
                 <div id={"fileName_" + uuid().slice(0, 8)}
-                     className={`file-name ${styles.jeremyBtn} ${active ? styles.active : ''}`}>
+                     className={`fileName ${styles.jeremyBtn} ${active ? styles.active : ''}`}
+                     onClick={(event) => helperOnClick(event, !isExpanded)}>
                     <FileText className={styles.iconGap} color="blue" size={14}/>
                     {files.name}</div>
             </>
         )
 
-        function helperOnClick(event, isExpanded, folder) {
+        function helperOnClick(event, isExpanded) {
             toggleExpanded(isExpanded)
-            addHighlight(event, folder)
+            addHighlight(event)
         }
 
         function addHighlight(event){
+            // let highlightEvent = event.target;
+            // highlightEvent.style.background = 'gray';
+
+
             let highlightEvent = event.target;
+            if (!highlightEvent.classList.contains('folderTitle') && !highlightEvent.classList.contains('fileName')) {
+                highlightEvent = highlightEvent.parentNode;
+            }
+            // Apply Background Color
             highlightEvent.style.background = 'gray';
+
+
+
 
             if(highlightedFolder == null){
                 highlightedFolder = highlightEvent
