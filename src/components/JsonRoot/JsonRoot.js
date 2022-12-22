@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './JsonRoot.module.css';
-import Directory from "../Recursion/Directory";
+import Directory from "../Directory/Directory";
 import files from "../../files.json";
 import JsonEditor from "../JsonEditor/JsonEditor";
 import Test from "../Test/Test";
+import DirectoryFolders from "../DirectoryFolders/DirectoryFolders";
 
 const JsonRoot = () => (
 
@@ -13,18 +14,16 @@ const JsonRoot = () => (
           <div className="container-fluid">
               <div className="row ">
                   <div className='p-2 col background '>
-                      {/*<Collections />*/}
+                      {/*<Directory files={files} />*/}
+                      {/*<DirectoryFolders files={files} />*/}
                       <Directory files={files} />
+
                   </div>
                   <div className="p-2 col-10 background">
                       <div className="mb-3">
                           <JsonEditor></JsonEditor>
-                          {/*<Test jeremyState={setJeremyState}/>*/}
                       </div>
                   </div>
-                  {/*<div className="p-2 col background ">*/}
-                  {/*    Column*/}
-                  {/*</div>*/}
               </div>
 
 

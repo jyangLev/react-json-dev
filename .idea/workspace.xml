@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Directory Component working with Folder Structure">
-      <change afterPath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.module.css" afterDir="false" />
+    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Remove unused components">
+      <change afterPath="$PROJECT_DIR$/src/components/DirectoryAddFolder/DirectoryAddFolder.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DirectoryAddFolder/DirectoryAddFolder.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TextEditor/TextEditor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TextEditor/TextEditor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TextEditor/TextEditor.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Collections/Collections.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Collections/Collections.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CollectionsV2/CollectionsV2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CollectionsV2/CollectionsV2.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/JsonValidator/JsonValidator.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/JsonValidator/JsonValidator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/JsonValidator/JsonValidator.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Test/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Test/Test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JsonEditor/JsonEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonEditor/JsonEditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recursion/Directory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Directory/Directory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recursion/Directory.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Directory/Directory.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recursion/Recursion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Recursion/Recursion.module.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,11 +56,13 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jeremytouch/IdeaProjects/react-json-dev/src/components/Recursion&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jeremy/IdeaProjects/react-json-dev&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2021.2.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -78,6 +84,12 @@
       <workItem from="1658348531837" duration="1189000" />
       <workItem from="1658503615137" duration="23000" />
       <workItem from="1658503646085" duration="3104000" />
+      <workItem from="1660333951891" duration="19000" />
+      <workItem from="1660884165403" duration="200000" />
+      <workItem from="1664602376262" duration="664000" />
+      <workItem from="1668152330770" duration="719000" />
+      <workItem from="1671608340052" duration="997000" />
+      <workItem from="1671640206049" duration="6933000" />
     </task>
     <task id="LOCAL-00001" summary="readd .idea files">
       <created>1658180225739</created>
@@ -125,6 +137,36 @@
             <State />
           </value>
         </entry>
+        <entry key="f5a2329c-3d9b-4c82-86ef-cf093a605ff0">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="f5a2329c-3d9b-4c82-86ef-cf093a605ff0" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>

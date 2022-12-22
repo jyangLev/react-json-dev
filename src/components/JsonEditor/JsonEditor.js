@@ -1,6 +1,8 @@
 import {useState} from "react";
 import JSONEditorDemo1 from "./JSONEditorDemo1";
 import "./JSONEditorDemo.css";
+import TextEditor from "../TextEditor/TextEditor";
+
 export default function JsonEditor() {
 
     var jsonBodyString = {
@@ -15,12 +17,17 @@ export default function JsonEditor() {
     const [jsonBody, setJSON] = useState({jsonBodyString});
     return (
         <div className="Jeremy-Editor">
-            <JSONEditorDemo1
-                jsonBody={jsonBody}
-                onChangeJSON={(json) => {
-                    setJSON(json);
-                }}
-            />
+            {/*<JSONEditorDemo1*/}
+            {/*    jsonBody={jsonBody}*/}
+            {/*    onChangeJSON={(json) => {*/}
+            {/*        setJSON(json);*/}
+            {/*    }}*/}
+            {/*/>*/}
+
+            <TextEditor jsonBody={jsonBody}
+                        onChangeJSON={(json) => {
+                            setJSON(json);
+                        }}/>
         </div>
     );
 }
