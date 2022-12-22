@@ -7,9 +7,13 @@ import files from "../../files.json";
 import {useEffect, useRef} from "react";
 import {v4 as uuid} from 'uuid';
 import {ChevronDown, ChevronRight, FileText, Folder} from "react-feather";
+import axios from "axios";
 
 
 const FileManager = () => {
+
+
+    const [fileState, setFileState] = useState(files);
 
     const ref = useRef(null);
     const [chosen, setChosen] = useState();
@@ -20,9 +24,16 @@ const FileManager = () => {
     }, []);
 
     console.log(files.name)
+
+
     return (
         <div ref={ref} className={styles.FileManager}>
             <Jeremy files={files}/>
+
+            <br/>
+            <br/>
+            <br/>
+            <button onClick={addNewFolder} type="button" className="btn btn-primary">Primary</button>
         </div>
     )
 
@@ -80,7 +91,7 @@ const FileManager = () => {
             addHighlight(event)
         }
 
-        function addHighlight(event){
+        function addHighlight(event) {
             // let highlightEvent = event.target;
             // highlightEvent.style.background = 'gray';
 
@@ -93,9 +104,7 @@ const FileManager = () => {
             highlightEvent.style.background = 'gray';
 
 
-
-
-            if(highlightedFolder == null){
+            if (highlightedFolder == null) {
                 highlightedFolder = highlightEvent
             } else if (highlightedFolder.id !== highlightEvent.id) {
                 removeHighlightFolder(highlightedFolder)
@@ -103,10 +112,95 @@ const FileManager = () => {
             }
         }
 
-        function removeHighlightFolder(highlightedFolder){
+        function removeHighlightFolder(highlightedFolder) {
             highlightedFolder.style.background = '';
         }
     }
+
+
+    function addNewFolder() {
+
+        fetchFileStructure();
+
+        // files.items.push('test')
+
+
+        if (!localStorage.getItem('react_json')) {
+            localStorage.setItem('react_json', JSON.stringify({files}))
+        } else {
+
+
+            const localJsonString = localStorage.getItem('react_json');
+
+            let jsonObj = JSON.parse(localJsonString);
+
+
+            let addedObj = {
+                "name": "new-folder",
+                "type": "folder",
+                "items": [
+
+                    {
+                        "name": "new-sub-folder",
+                        "type": "folder",
+                        "item": []
+                    },
+                    {
+                        "name": "new-sub-folder2",
+                        "type": "folder",
+                        "item": []
+                    }
+
+
+                ]
+            }
+
+
+            // jsonObj.files.items.push(addedObj);
+
+            fileState.items.push(addedObj);
+            setFileState(fileState)
+            // files.items.push(addedObj);
+
+            console.log('started');
+
+            // console.log( files.name);
+            // console.log( {files});
+
+
+            console.log('completed');
+
+
+            // return <Jeremy files={fileState}   />
+
+
+            /// Set it with new local Storage
+
+        }
+        // alert(files.items[0].name)
+    }
+
+
+    function fetchFileStructure() {
+
+        const options = {
+
+            headers: {
+                'Access-Control-Allow-Origin': true
+            }
+        };
+
+        axios.post('http://localhost:8080/post', {
+            firstName: 'Finn',
+            lastName: 'Williams'
+        }, options)
+            .then((response) => {
+                console.log(response);
+            }, (error) => {
+                console.log(error);
+            });
+    }
+
 
 }
 

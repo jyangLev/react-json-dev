@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Add folder highlight logic">
+    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="wip: Add folder highlight logic files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/FileManager/FileManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FileManager/FileManager.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,8 +44,11 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/jeremytouch/IdeaProjects/react-json-dev/src/components/Recursion&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.linters.eslint&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -84,7 +89,9 @@
       <workItem from="1658503615137" duration="23000" />
       <workItem from="1658503646085" duration="3104000" />
       <workItem from="1660231458092" duration="13098000" />
-      <workItem from="1661281654051" duration="2680000" />
+      <workItem from="1661281654051" duration="11728000" />
+      <workItem from="1662528676510" duration="5386000" />
+      <workItem from="1664666278750" duration="735000" />
     </task>
     <task id="LOCAL-00001" summary="readd .idea files">
       <created>1658180225739</created>
@@ -114,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661240616118</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="wip: Add folder highlight logic files">
+      <created>1661289877659</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1661289877659</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,7 +192,8 @@
     <MESSAGE value="Add Recursion Logic for folder structure" />
     <MESSAGE value="Directory Component working with Folder Structure" />
     <MESSAGE value="Add folder highlight logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add folder highlight logic" />
+    <MESSAGE value="wip: Add folder highlight logic files" />
+    <option name="LAST_COMMIT_MESSAGE" value="wip: Add folder highlight logic files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -190,5 +205,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
