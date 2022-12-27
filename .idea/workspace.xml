@@ -5,21 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Remove unused components">
-      <change afterPath="$PROJECT_DIR$/src/components/DirectoryAddFolder/DirectoryAddFolder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/DirectoryAddFolder/DirectoryAddFolder.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TextEditor/TextEditor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TextEditor/TextEditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/TextEditor/TextEditor.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/JsonEditor/JsonEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonEditor/JsonEditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Directory/Directory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Directory/Directory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DirectoryAddFolder/DirectoryAddFolder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryAddFolder/DirectoryAddFolder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recursion/Directory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Directory/Directory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recursion/Directory.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Directory/Directory.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recursion/Recursion.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Recursion/Recursion.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Test/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Test/Test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +82,11 @@
       <workItem from="1668152330770" duration="719000" />
       <workItem from="1671608340052" duration="997000" />
       <workItem from="1671640206049" duration="6933000" />
+      <workItem from="1671781454610" duration="314000" />
+      <workItem from="1671895702450" duration="2229000" />
+      <workItem from="1671901279077" duration="1589000" />
+      <workItem from="1671993153686" duration="7040000" />
+      <workItem from="1672075495773" duration="5286000" />
     </task>
     <task id="LOCAL-00001" summary="readd .idea files">
       <created>1658180225739</created>

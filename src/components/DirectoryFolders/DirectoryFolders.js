@@ -2,12 +2,16 @@ import React, {useState} from 'react';
 import {ChevronDown, ChevronRight, FileText, Folder} from "react-feather";
 import styles from "./DirectoryFolders.module.css";
 
-const DirectoryFolders = ({files}) => {
+
+
+const DirectoryFolders = (props) => {
     const [isExpanded, toggleExpanded] = useState(false);
 
-    if (files.type === 'folder') {
+
+    if (props.files.type === 'folder') {
         return (
             <div className={`folder ${styles.jeremyBtn}`}>
+
                 <div className="folder-title onclick" onClick={() => helperOnclick(!isExpanded, true)}>
 
                     {isExpanded
@@ -15,10 +19,10 @@ const DirectoryFolders = ({files}) => {
                         : <ChevronRight className={`${styles.iconGap}`} color="black" size={14}/>
                     }
                     <Folder className={styles.iconGap} color="blue" size={14}/>
-                    {files.name}
+                    {props.files.name}
                 </div>
                 {
-                    isExpanded && files.items.map((item) => <DirectoryFolders files={item}/>)
+                    isExpanded && props.files.items.map((item) => <DirectoryFolders files={item}/>)
                 }
             </div>
         )
@@ -27,7 +31,7 @@ const DirectoryFolders = ({files}) => {
         <>
             <div className={`file-name onclick ${styles.jeremyBtn} `}>
                 <FileText className={styles.iconGap} color="blue" size={14}/>
-                {files.name}</div>
+                {props.files.name}</div>
         </>
     )
 
