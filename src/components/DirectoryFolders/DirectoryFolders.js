@@ -2,16 +2,13 @@ import React, {useState} from 'react';
 import {ChevronDown, ChevronRight, FileText, Folder} from "react-feather";
 import styles from "./DirectoryFolders.module.css";
 
-
-
 const DirectoryFolders = (props) => {
     const [isExpanded, toggleExpanded] = useState(false);
 
 
-    if (props.files.type === 'folder') {
+    if (props.files !=null && props.files.type === 'folder') {
         return (
             <div className={`folder ${styles.jeremyBtn}`}>
-
                 <div className="folder-title onclick" onClick={() => helperOnclick(!isExpanded, true)}>
 
                     {isExpanded
@@ -26,14 +23,16 @@ const DirectoryFolders = (props) => {
                 }
             </div>
         )
+    } else if(props.files!=null && props.files.type === 'file'){
+        return (
+            <>
+                <div className={`file-name onclick ${styles.jeremyBtn} `}>
+                    <FileText className={styles.iconGap} color="blue" size={14}/>
+                    {props.files.name}</div>
+            </>
+        )
     }
-    return (
-        <>
-            <div className={`file-name onclick ${styles.jeremyBtn} `}>
-                <FileText className={styles.iconGap} color="blue" size={14}/>
-                {props.files.name}</div>
-        </>
-    )
+
 
 
     function helperOnclick(isExpanded, isHighlighted) {
