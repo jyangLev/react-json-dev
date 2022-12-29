@@ -1,44 +1,22 @@
 import React, {useState} from 'react';
 import {ChevronDown, ChevronRight, FileText, Folder} from "react-feather";
 import styles from "./DirectoryFolders.module.css";
+import DirectoryLoadFolders from "../DirectoryLoadFolders/DirectoryLoadFolders";
 
 const DirectoryFolders = (props) => {
-    const [isExpanded, toggleExpanded] = useState(false);
+
+    const [selectedItem, setSelectedItem] = useState();
+    const [selectedEvent, setSelectedEvent] = useState();
 
 
-    if (props.files !=null && props.files.type === 'folder') {
-        return (
-            <div className={`folder ${styles.jeremyBtn}`}>
-                <div className="folder-title onclick" onClick={() => helperOnclick(!isExpanded, true)}>
+    return(
+    <>
+        <DirectoryLoadFolders  files={props.files} selectedItem = {selectedItem} setSelectedItem={setSelectedItem} selectedEvent={selectedEvent} setSelectedEvent={setSelectedEvent} />
 
-                    {isExpanded
-                        ? <ChevronDown className={styles.iconGap} color="black" size={14}/>
-                        : <ChevronRight className={`${styles.iconGap}`} color="black" size={14}/>
-                    }
-                    <Folder className={styles.iconGap} color="blue" size={14}/>
-                    {props.files.name}
-                </div>
-                {
-                    isExpanded && props.files.items.map((item) => <DirectoryFolders files={item}/>)
-                }
-            </div>
-        )
-    } else if(props.files!=null && props.files.type === 'file'){
-        return (
-            <>
-                <div className={`file-name onclick ${styles.jeremyBtn} `}>
-                    <FileText className={styles.iconGap} color="blue" size={14}/>
-                    {props.files.name}</div>
-            </>
-        )
-    }
+    </>
+)
 
 
-
-    function helperOnclick(isExpanded, isHighlighted) {
-        toggleExpanded(isExpanded)
-
-    }
 };
 
 DirectoryFolders.propTypes = {};
@@ -46,3 +24,10 @@ DirectoryFolders.propTypes = {};
 DirectoryFolders.defaultProps = {};
 
 export default DirectoryFolders;
+
+
+//files={item}
+//                                                      itemName={item.name}
+//                                                      active={item.name === chosen}
+//                                                      onClick={() => setChosen(item.name)}
+//                                                      key={index}

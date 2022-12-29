@@ -3,32 +3,45 @@ import styles from './Test.module.css';
 import {formatDollars} from "../../common/utils";
 
 
-const Test = ({jeremyState}) => {
-    const people = [
-        {
-            id: 1,
-            name: 'Alice',
-            pets: ['dog', 'cat'],
-        },
-        {id: 2, name: 'Bob', pets: ['turtle', 'rabbit']},
-        {id: 3, name: 'Carl', pets: ['hamster', 'parrot']},
-    ];
+const Test = () => {
+    document.onclick = hideMenu;
+    document.oncontextmenu = rightClick;
+
+    function hideMenu() {
+        document.getElementById(
+            "contextMenu").style.display = "none"
+    }
+
+    function rightClick(e) {
+        e.preventDefault();
+
+        if (document.getElementById(
+            "contextMenu").style.display == "block")
+            hideMenu();
+        else {
+            var menu = document
+                .getElementById("contextMenu")
+
+            menu.style.display = 'block';
+            menu.style.left = e.pageX + "px";
+            menu.style.top = e.pageY + "px";
+        }
+    }
 
     return (
         <div>
-            {people.map((person, index) => (
-                <div key={index}>
-                    <h2>Name: {person.name}</h2>
-
-                    {person.pets.map((pet, index) => (
-                        <div key={index}>
-                            <h2>Pet: {pet}</h2>
-                        </div>
-                    ))}
-
-                    <hr/>
-                </div>
-            ))}
+            <div id="contextMenu" className="context-menu"
+                 style={{display:"none"}}>
+                <ul>
+                    <li><a href="#">Element-1</a></li>
+                    <li><a href="#">Element-2</a></li>
+                    <li><a href="#">Element-3</a></li>
+                    <li><a href="#">Element-4</a></li>
+                    <li><a href="#">Element-5</a></li>
+                    <li><a href="#">Element-6</a></li>
+                    <li><a href="#">Element-7</a></li>
+                </ul>
+            </div>
         </div>
     );
 }
