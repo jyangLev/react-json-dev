@@ -10,7 +10,8 @@ const DirectoryLoadFolders = (props) => {
     if (props.files != null && props.files.type === 'folder') {
         return (
             <div className={`folder ${styles.jeremyBtn}`}>
-                <div className="folder-title onclick" onClick={(event) => helperOnclick(event, !isExpanded, true)}>
+                <div className="folder-title onclick" onClick={(event) => helperOnclick(event)}
+                     onDoubleClick={(event) => toggleExpanded(!isExpanded)}>
 
                     {isExpanded
                         ? <ChevronDown className={styles.iconGap} color="black" size={14}/>
@@ -28,7 +29,7 @@ const DirectoryLoadFolders = (props) => {
                                                                                                selectedItem={props.selectedItem}
                                                                                                setSelectedItem={props.setSelectedItem}
                                                                                                selectedEvent={props.selectedEvent}
-                                                                                               setSelectedEvent = {props.setSelectedEvent}
+                                                                                               setSelectedEvent={props.setSelectedEvent}
                     />)
                 }
             </div>
@@ -36,7 +37,8 @@ const DirectoryLoadFolders = (props) => {
     } else if (props.files != null && props.files.type === 'file') {
         return (
             <>
-                <div className={`file-name onclick ${styles.jeremyBtn} `}>
+                <div className={`file-name onclick ${styles.jeremyBtn} `}
+                     onClick={(event) => helperOnclick(event, !isExpanded, true)}>
                     <FileText className={styles.iconGap} color="orange" size={14}/>
                     {props.files.name}</div>
             </>
@@ -44,20 +46,21 @@ const DirectoryLoadFolders = (props) => {
     }
 
 
-    function helperOnclick(event, isExpanded, isHighlighted) {
-        toggleExpanded(isExpanded)
+    function helperOnclick(event) {
+        // toggleExpanded(isExpanded)
         addHighlight(event)
 
     }
 
+
     function addHighlight(event) {
 
         let highlightEvent = event.target;
+
+        // This logic checks if you click on Chevron instead of the folder/file
         if (!highlightEvent.classList.contains('folder-title') && !highlightEvent.classList.contains('file-name')) {
             highlightEvent = highlightEvent.parentNode;
-            console.error('WENT INTO HIGHLIGHTED EVENT!!!!');
         }
-
 
 
         if (props.selectedEvent == null) {
