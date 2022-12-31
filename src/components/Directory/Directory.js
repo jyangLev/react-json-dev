@@ -9,10 +9,9 @@ const Directory = (props) => {
     return (
 
         <div>
-            <DirectoryAddFolder files={props.files} setFiles={props.setFiles} counter={props.counter} setCounter={props.setCounter}/>
-            {/*<DirectoryLoadFolders  files={props.files} setFiles={props.setFiles} />*/}
+            {/*<DirectoryAddFolder files={props.files} setFiles={props.setFiles} counter={props.counter} setCounter={props.setCounter}/>*/}
 
-            <DirectoryFolders files={props.files} setFiles={props.setFiles} />
+            <DirectoryFolders files={props.files} setFiles={props.setFiles} counter={props.counter} setCounter={props.setCounter} />
             {/*<Test/>*/}
         </div>
 

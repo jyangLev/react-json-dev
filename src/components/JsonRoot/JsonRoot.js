@@ -3,12 +3,16 @@ import styles from './JsonRoot.module.css';
 import Directory from "../Directory/Directory";
 import filesOriginal from "../../files.json";
 import JsonEditor from "../JsonEditor/JsonEditor";
+import axios from 'axios';
+
 
 const JsonRoot = () => {
 
     let [files, setFiles] = useState(filesOriginal)
 
     let [counter, setCounter] = useState(0);
+    let response = makeHttpCall;
+
 
     return (
         <div className={styles.JsonRoot}>
@@ -17,10 +21,9 @@ const JsonRoot = () => {
                     <div className="row ">
                         <div className='p-2 col background '>
                             {counter}
-                            <Directory files={files} setFiles={setFiles} counter={counter} setCounter = {setCounter}/>
-                            {/*<button type="button" className="btn btn-secondary" onClick={event => checkFolderStructure()}>Check File Structure</button>*/}
-                            {/*<button type="button" className="btn btn-secondary" onClick={event => updateFolderStructure()}>Update File Structure</button>*/}
-                            {/*<button type="button" className="btn btn-danger" onClick={event => updateFolderStructure()}>Update Name</button>*/}
+                            {/*{response}*/}
+                            <Directory files={files} setFiles={setFiles} counter={counter} setCounter={setCounter}/>
+                            <button type="button" className="btn btn-success" onClick={ makeHttpCall }>Call HTTP</button>
 
                         </div>
                         <div className="p-2 col-10 background">
@@ -33,6 +36,16 @@ const JsonRoot = () => {
             </div>
         </div>
     )
+
+
+    function makeHttpCall(){
+        axios.post('http://localhost:8080/jeremy', {
+            jsonFileObject:'smal String'
+        }, 'Access-Control-Allow-Origin')
+            .then(function (response) {
+                console.log(response);
+            })
+    }
 };
 
 JsonRoot.propTypes = {};

@@ -33,7 +33,7 @@ const DirectoryAddFolder = (props) => {
 
     return (
   <div className={styles.DirectoryAddFolder}>
-      <button type="button" className="btn btn-primary" onClick={event => updateFolder(props.files, props.setFiles, props.counter, props.setCounter)}>Update Folder</button>
+      {/*<button type="button" className="btn btn-primary" onClick={event => updateFolder(props.files, props.setFiles, props.counter, props.setCounter)}>Update Folder</button>*/}
       <button type="button" className="btn btn-secondary" onClick={event => addNewFolder(props.files, props.setFiles, props.counter, props.setCounter)}>New Folder</button>
       <button type="button" className="btn btn-danger" onClick={event => removeFolder(props.files, props.setFiles, props.counter, props.setCounter)}>Remove Folder</button>
   </div>

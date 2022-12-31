@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Highlight working on selected folders">
+    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Double click to expand feature added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DirectoryLoadFolders/DirectoryLoadFolders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryLoadFolders/DirectoryLoadFolders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Directory/Directory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Directory/Directory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DirectoryAddFolder/DirectoryAddFolder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryAddFolder/DirectoryAddFolder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/files.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,22 +43,22 @@
     <option name="autoscrollToSource" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Jeremy/IdeaProjects/react-json-dev",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2021.2.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Jeremy/IdeaProjects/react-json-dev&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2021.2.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/Recursion" />
@@ -84,7 +90,9 @@
       <workItem from="1672075495773" duration="9206000" />
       <workItem from="1672162156923" duration="6036000" />
       <workItem from="1672259689092" duration="1829000" />
-      <workItem from="1672331973936" duration="15302000" />
+      <workItem from="1672331973936" duration="18382000" />
+      <workItem from="1672420062762" duration="6852000" />
+      <workItem from="1672468094952" duration="1704000" />
     </task>
     <task id="LOCAL-00001" summary="readd .idea files">
       <created>1658180225739</created>
@@ -121,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672347417844</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Double click to expand feature added">
+      <created>1672370229171</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672370229171</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +201,8 @@
     <MESSAGE value="Directory Component working with Folder Structure" />
     <MESSAGE value="Dynamically Updating Folder with incrementing counter" />
     <MESSAGE value="Highlight working on selected folders" />
-    <option name="LAST_COMMIT_MESSAGE" value="Highlight working on selected folders" />
+    <MESSAGE value="Double click to expand feature added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Double click to expand feature added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
