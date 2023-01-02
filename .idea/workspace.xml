@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Double click to expand feature added">
+    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Simple saving string into DB">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Directory/Directory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Directory/Directory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DirectoryAddFolder/DirectoryAddFolder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryAddFolder/DirectoryAddFolder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/files.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/files.json" afterDir="false" />
     </list>
@@ -92,7 +87,9 @@
       <workItem from="1672259689092" duration="1829000" />
       <workItem from="1672331973936" duration="18382000" />
       <workItem from="1672420062762" duration="6852000" />
-      <workItem from="1672468094952" duration="1704000" />
+      <workItem from="1672468094952" duration="1759000" />
+      <workItem from="1672533289648" duration="594000" />
+      <workItem from="1672600825174" duration="5635000" />
     </task>
     <task id="LOCAL-00001" summary="readd .idea files">
       <created>1658180225739</created>
@@ -136,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672370229171</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Simple saving string into DB">
+      <created>1672471264888</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1672471264888</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +206,8 @@
     <MESSAGE value="Dynamically Updating Folder with incrementing counter" />
     <MESSAGE value="Highlight working on selected folders" />
     <MESSAGE value="Double click to expand feature added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Double click to expand feature added" />
+    <MESSAGE value="Simple saving string into DB" />
+    <option name="LAST_COMMIT_MESSAGE" value="Simple saving string into DB" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,43 +1,52 @@
 {
   "name": "Root-Folder",
   "type": "folder",
+  "id": "111",
   "items": [
     {
       "name": "src-folder",
       "type": "folder",
+      "id": "112",
       "items": [
         {
           "name": "components-folder",
           "type": "folder",
+          "id": "113",
           "items": [
             {
               "name": "Checkbox-Folder",
               "type": "folder",
+              "id": "114",
               "items": []
             },
             {
               "name": "Checkbox.jsx",
-              "type": "file"
+              "type": "file",
+              "id": "115"
             }
           ]
         },
         {
           "name": "pages-folder",
           "type": "folder",
+          "id": "116",
           "items": [
             {
               "name": "file1.jsx",
-              "type": "file"
+              "type": "file",
+              "id": "117"
             },
             {
               "name": "file2.jsx",
-              "type": "file"
+              "type": "file",
+              "id": "118"
             }
           ]
         },
         {
           "name": "file.css",
-          "type": "file"
+          "type": "file",
+          "id": "119"
         }
       ]
     }

@@ -23,7 +23,7 @@ const JsonRoot = () => {
                             {counter}
                             {/*{response}*/}
                             <Directory files={files} setFiles={setFiles} counter={counter} setCounter={setCounter}/>
-                            <button type="button" className="btn btn-success" onClick={ makeHttpCall }>Call HTTP</button>
+                            <button type="button" className="btn btn-success" onClick={makeHttpCall}>Call HTTP</button>
 
                         </div>
                         <div className="p-2 col-10 background">
@@ -38,9 +38,11 @@ const JsonRoot = () => {
     )
 
 
-    function makeHttpCall(){
-        axios.post('http://localhost:8080/jeremy', {
-            jsonFileObject:'smal String'
+    function makeHttpCall() {
+
+        axios.post('http://localhost:8080/fileSystem', {
+            userTableId: "1",
+            jsonStructure: JSON.stringify(files)
         }, 'Access-Control-Allow-Origin')
             .then(function (response) {
                 console.log(response);
