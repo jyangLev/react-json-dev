@@ -8,21 +8,15 @@ import Test from "../Test/Test";
 const DirectoryAddFolder = (props) => {
     const [num, setNum] = useState(0);
 
-    function updateFolder(file, stateChanger, counter, setCounter) {
-        let val = counter+1;
-        setCounter(val)
-        //file.items[0].items[0].name = val ;
+    function addNewFolder(files, setFiles) {
+        let tempFile = Object.assign({}, files);
+        tempFile.items[0].items[0].items[0].items[0] = JSON.parse('{"name":"someFolder123","type":"folder","items":[]}')
+        setFiles(tempFile)
+
+        // TODO ThIS WILL NOT ADD MORE THAN ONE SINCE ITS HARD CODED, need to dynamically add folder/file to specific folder
     }
 
-
-    function addNewFolder(file, stateChanger, counter, setCounter) {
-        setCounter(counter+1)
-
-        file.items[0].items[0].items[0].items[num] = JSON.parse('{"name":"someFolder123","type":"folder","items":[]}')
-        setNum(num+1)
-    }
-
-    function removeFolder(files, setFiles, counter, setCounter) {
+    function removeFolder(files, setFiles) {
         let tempFile = Object.assign({}, files);
 
         tempFile.items[0].items[0].items[0].items.pop();
@@ -33,9 +27,8 @@ const DirectoryAddFolder = (props) => {
 
     return (
   <div className={styles.DirectoryAddFolder}>
-      {/*<button type="button" className="btn btn-primary" onClick={event => updateFolder(props.files, props.setFiles, props.counter, props.setCounter)}>Update Folder</button>*/}
-      <button type="button" className="btn btn-secondary" onClick={event => addNewFolder(props.files, props.setFiles, props.counter, props.setCounter)}>New Folder</button>
-      <button type="button" className="btn btn-danger" onClick={event => removeFolder(props.files, props.setFiles, props.counter, props.setCounter)}>Remove Folder</button>
+      <button type="button" className="btn btn-secondary" onClick={event => addNewFolder(props.files, props.setFiles)}>New Folder</button>
+      <button type="button" className="btn btn-danger" onClick={event => removeFolder(props.files, props.setFiles)}>Remove Folder</button>
   </div>
 )};
 

@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Simple saving string into DB">
+    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="create proper request to save to file system controller">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Directory/Directory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Directory/Directory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DirectoryAddFolder/DirectoryAddFolder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryAddFolder/DirectoryAddFolder.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DirectoryLoadFolders/DirectoryLoadFolders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryLoadFolders/DirectoryLoadFolders.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/files.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +94,9 @@
       <workItem from="1672420062762" duration="6852000" />
       <workItem from="1672468094952" duration="1759000" />
       <workItem from="1672533289648" duration="594000" />
-      <workItem from="1672600825174" duration="5635000" />
+      <workItem from="1672600825174" duration="5957000" />
+      <workItem from="1672678073606" duration="1993000" />
+      <workItem from="1672719690214" duration="7916000" />
     </task>
     <task id="LOCAL-00001" summary="readd .idea files">
       <created>1658180225739</created>
@@ -140,11 +147,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672471264888</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="create proper request to save to file system controller">
+      <created>1672646603739</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1672646603739</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ID_ORDER">
@@ -207,19 +224,20 @@
     <MESSAGE value="Highlight working on selected folders" />
     <MESSAGE value="Double click to expand feature added" />
     <MESSAGE value="Simple saving string into DB" />
-    <option name="LAST_COMMIT_MESSAGE" value="Simple saving string into DB" />
+    <MESSAGE value="create proper request to save to file system controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="create proper request to save to file system controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/DirectoryAddFolder/DirectoryAddFolder.js</url>
-          <line>27</line>
+          <line>21</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/DirectoryAddFolder/DirectoryAddFolder.js</url>
-          <line>28</line>
+          <line>22</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

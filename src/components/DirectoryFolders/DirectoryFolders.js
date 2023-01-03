@@ -10,13 +10,23 @@ const DirectoryFolders = (props) => {
     const [selectedEvent, setSelectedEvent] = useState();
 
 
-    return(
-    <>
-        <DirectoryAddFolder files={props.files} setFiles={props.setFiles} counter={props.counter} setCounter={props.setCounter}/>
-        <DirectoryLoadFolders  files={props.files} selectedItem = {selectedItem} setSelectedItem={setSelectedItem} selectedEvent={selectedEvent} setSelectedEvent={setSelectedEvent} />
+    if (props.files != '') {
+        return (
+            <>
+                <DirectoryAddFolder files={props.files} setFiles={props.setFiles} counter={props.counter}
+                                    setCounter={props.setCounter}/>
+                <div className={styles.directoryLoadFoldersClass}>
 
-    </>
-)
+                    <DirectoryLoadFolders files={props.files} selectedItem={selectedItem}
+                                          setSelectedItem={setSelectedItem}
+                                          selectedEvent={selectedEvent} setSelectedEvent={setSelectedEvent}/>
+                </div>
+
+            </>
+        )
+    }
+    return <DirectoryAddFolder files={props.files} setFiles={props.setFiles} counter={props.counter}
+                               setCounter={props.setCounter}/>
 
 
 };

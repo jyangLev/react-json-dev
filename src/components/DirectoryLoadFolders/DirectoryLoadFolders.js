@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import PropTypes from 'prop-types';
 import styles from './DirectoryLoadFolders.module.css';
 import {ChevronDown, ChevronRight, FileText, Folder} from "react-feather";
 
@@ -37,7 +36,7 @@ const DirectoryLoadFolders = (props) => {
     } else if (props.files != null && props.files.type === 'file') {
         return (
             <>
-                <div className={`file-name onclick ${styles.jeremyBtn} `}
+                <div className={`file file-name onclick ${styles.jeremyBtn} `}
                      onClick={(event) => helperOnclick(event, !isExpanded, true)}>
                     <FileText className={styles.iconGap} color="orange" size={14}/>
                     {props.files.name}</div>
@@ -47,9 +46,12 @@ const DirectoryLoadFolders = (props) => {
 
 
     function helperOnclick(event) {
-        // toggleExpanded(isExpanded)
         addHighlight(event)
+        //TODO display file into editor using state????
+        if(event.target.classList.contains('file')){
+            console.log("A File was Selected!")
 
+        }
     }
 
 

@@ -1,20 +1,22 @@
 import React, {useState} from 'react';
 import styles from './JsonRoot.module.css';
 import Directory from "../Directory/Directory";
-import filesOriginal from "../../files.json";
 import JsonEditor from "../JsonEditor/JsonEditor";
 import axios from 'axios';
 
 
 const JsonRoot = () => {
 
-    let [files, setFiles] = useState(filesOriginal)
+    // let [files, setFiles] = useState(()=> retrieveJsonStructure())  // This gets called twice on load ???/
+    let [files, setFiles] = useState(retrieveJsonStructure)  // This gets called twice on load ???/
 
     let [counter, setCounter] = useState(0);
-    let response = makeHttpCall;
+    //let response = setJsonStructure;
+    let [selectedFile, setSelectedFile] = useState();
 
 
     return (
+
         <div className={styles.JsonRoot}>
             <div>
                 <div className="container-fluid">
@@ -23,7 +25,8 @@ const JsonRoot = () => {
                             {counter}
                             {/*{response}*/}
                             <Directory files={files} setFiles={setFiles} counter={counter} setCounter={setCounter}/>
-                            <button type="button" className="btn btn-success" onClick={makeHttpCall}>Call HTTP</button>
+                            <button type="button" className="btn btn-success" onClick={setJsonStructure}>Call HTTP
+                            </button>
 
                         </div>
                         <div className="p-2 col-10 background">
@@ -37,10 +40,21 @@ const JsonRoot = () => {
         </div>
     )
 
+    function retrieveJsonStructure() {
+        axios.post(process.env.REACT_APP_RETRIEVE_JSON_STRUCTURE_URL
+            , {
+                userTableId: "1",
+            }, 'Access-Control-Allow-Origin')
+            .then(function (response) {
+                console.log(response.data);
+                setFiles(response.data)
+                return response.data;
+            })
+    }
 
-    function makeHttpCall() {
 
-        axios.post('http://localhost:8080/fileSystem', {
+    function setJsonStructure() {
+        axios.post(process.env.REACT_APP_SET_JSON_STRUCTURE_URL, {
             userTableId: "1",
             jsonStructure: JSON.stringify(files)
         }, 'Access-Control-Allow-Origin')
