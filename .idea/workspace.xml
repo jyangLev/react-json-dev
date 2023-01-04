@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="create proper request to save to file system controller">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="clean up code and remove default browser highlighting of text when clicking on json structure">
+      <change afterPath="$PROJECT_DIR$/src/components/ContextMenu/ContextMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ContextMenu/ContextMenu.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Directory/Directory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Directory/Directory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DirectoryAddFolder/DirectoryAddFolder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryAddFolder/DirectoryAddFolder.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DirectoryLoadFolders/DirectoryLoadFolders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryLoadFolders/DirectoryLoadFolders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +25,19 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="e3d01904-753d-418c-b851-64e84529ccfa" />
+        <option name="url" value="https://github.com/kenghtt/react-json-dev.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
