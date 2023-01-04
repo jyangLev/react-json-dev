@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="clean up code and remove default browser highlighting of text when clicking on json structure">
-      <change afterPath="$PROJECT_DIR$/src/components/ContextMenu/ContextMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ContextMenu/ContextMenu.module.css" afterDir="false" />
+    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="context menu functionality added when right clicking on folder structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Directory/Directory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Directory/Directory.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672646603739</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="context menu functionality added when right clicking on folder structure">
+      <created>1672812018800</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1672812018800</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,7 +241,8 @@
     <MESSAGE value="Double click to expand feature added" />
     <MESSAGE value="Simple saving string into DB" />
     <MESSAGE value="create proper request to save to file system controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="create proper request to save to file system controller" />
+    <MESSAGE value="context menu functionality added when right clicking on folder structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="context menu functionality added when right clicking on folder structure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

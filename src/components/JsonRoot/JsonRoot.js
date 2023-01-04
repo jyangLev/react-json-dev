@@ -13,18 +13,27 @@ const JsonRoot = () => {
     let [counter, setCounter] = useState(0);
     //let response = setJsonStructure;
     let [selectedFile, setSelectedFile] = useState();
+    const initialContextMenu = {
+        show: false,
+        x: 0,
+        y: 0
+    }
+    const [contextMenu, setContextMenu] = useState(initialContextMenu)
 
+    function closeContextMenu(){
+        setContextMenu(initialContextMenu)
+    }
 
     return (
 
         <div className={styles.JsonRoot}>
             <div>
-                <div className="container-fluid">
+                <div className="container-fluid" onClick={closeContextMenu}>
                     <div className="row ">
                         <div className='p-2 col background '>
                             {counter}
                             {/*{response}*/}
-                            <Directory files={files} setFiles={setFiles} counter={counter} setCounter={setCounter}/>
+                            <Directory files={files} setFiles={setFiles} counter={counter} setCounter={setCounter} contextMenu={contextMenu} setContextMenu={setContextMenu} />
                             <button type="button" className="btn btn-success" onClick={setJsonStructure}>Call HTTP
                             </button>
 

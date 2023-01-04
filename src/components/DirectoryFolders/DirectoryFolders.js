@@ -14,17 +14,17 @@ const DirectoryFolders = (props) => {
         x: 0,
         y: 0
     }
-    const [contextMenu, setContextMenu] = useState(initialContextMenu)
+    // const [contextMenu, setContextMenu] = useState(initialContextMenu)
 
     function handleContextMenu(e) {
         e.preventDefault();
         const {pageX, pageY} = e
-        setContextMenu({show: true, x: pageX, y: pageY})
+        props.setContextMenu({show: true, x: pageX, y: pageY})
     }
 
-    function closeContextMenu(){
-        setContextMenu(initialContextMenu);
-    }
+    // function closeContextMenu(){
+    //     setContextMenu(initialContextMenu);
+    // }
 
 
     if (props.files != '') {
@@ -32,12 +32,13 @@ const DirectoryFolders = (props) => {
             <>
                 <DirectoryAddFolder files={props.files} setFiles={props.setFiles} counter={props.counter}
                                     setCounter={props.setCounter}/>
-                <div className={styles.directoryLoadFoldersClass} onClick={closeContextMenu}  onContextMenu={(e) => handleContextMenu(e)}>
+                <div className={styles.directoryLoadFoldersClass} onContextMenu={(e) => handleContextMenu(e)}>
 
                     <DirectoryLoadFolders files={props.files} selectedItem={selectedItem}
                                           setSelectedItem={setSelectedItem}
                                           selectedEvent={selectedEvent} setSelectedEvent={setSelectedEvent}/>
-                    {contextMenu.show && <ContextMenu x={contextMenu.x} y={contextMenu.y} setContextMenu={setContextMenu}/>}
+
+                    {props.contextMenu.show && <ContextMenu x={props.contextMenu.x} y={props.contextMenu.y} setContextMenu={props.setContextMenu}/>}
                 </div>
 
             </>
