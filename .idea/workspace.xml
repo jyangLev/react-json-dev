@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="context menu functionality added when right clicking on folder structure">
+    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="context menu properly closing when left-clicking anywhere on page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Directory/Directory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Directory/Directory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContextMenu/ContextMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContextMenu/ContextMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContextMenu/ContextMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContextMenu/ContextMenu.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,11 +26,11 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -106,6 +106,7 @@
       <workItem from="1672600825174" duration="5957000" />
       <workItem from="1672678073606" duration="1993000" />
       <workItem from="1672719690214" duration="7916000" />
+      <workItem from="1672850327664" duration="13269000" />
     </task>
     <task id="LOCAL-00001" summary="readd .idea files">
       <created>1658180225739</created>
@@ -170,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672812018800</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="context menu properly closing when left-clicking anywhere on page">
+      <created>1672813383368</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1672813383368</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,7 +250,8 @@
     <MESSAGE value="Simple saving string into DB" />
     <MESSAGE value="create proper request to save to file system controller" />
     <MESSAGE value="context menu functionality added when right clicking on folder structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="context menu functionality added when right clicking on folder structure" />
+    <MESSAGE value="context menu properly closing when left-clicking anywhere on page" />
+    <option name="LAST_COMMIT_MESSAGE" value="context menu properly closing when left-clicking anywhere on page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

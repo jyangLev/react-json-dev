@@ -3,3 +3,11 @@
     position: absolute;
     z-index: 20;
 }
+
+.ContextMenuItem{
+    /*padding-top: 3px !important;*/
+    /*padding-bottom: 3px !important;*/
+    padding: 3px 40px 3px 40px !important;
+    /*background-color: #f3f3f3;*/
+
+}

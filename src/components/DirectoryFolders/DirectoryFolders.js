@@ -14,18 +14,15 @@ const DirectoryFolders = (props) => {
         x: 0,
         y: 0
     }
-    // const [contextMenu, setContextMenu] = useState(initialContextMenu)
+    let target = null;
 
     function handleContextMenu(e) {
         e.preventDefault();
+        console.log(e.target)
         const {pageX, pageY} = e
         props.setContextMenu({show: true, x: pageX, y: pageY})
+        target = e.target;
     }
-
-    // function closeContextMenu(){
-    //     setContextMenu(initialContextMenu);
-    // }
-
 
     if (props.files != '') {
         return (
@@ -38,7 +35,9 @@ const DirectoryFolders = (props) => {
                                           setSelectedItem={setSelectedItem}
                                           selectedEvent={selectedEvent} setSelectedEvent={setSelectedEvent}/>
 
-                    {props.contextMenu.show && <ContextMenu x={props.contextMenu.x} y={props.contextMenu.y} setContextMenu={props.setContextMenu}/>}
+                    {props.contextMenu.show && <ContextMenu x={props.contextMenu.x} y={props.contextMenu.y}
+                                                            setContextMenu={props.setContextMenu} files={props.files}
+                                                            setFiles={props.setFiles} target={target}/>}
                 </div>
 
             </>
