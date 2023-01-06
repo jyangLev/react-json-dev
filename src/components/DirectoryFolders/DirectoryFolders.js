@@ -24,27 +24,28 @@ const DirectoryFolders = (props) => {
         target = e.target;
     }
 
-    if (props.files != '') {
+    if (props.files && props.files.length > 0) {
         return (
-            <>
-                <DirectoryAddFolder files={props.files} setFiles={props.setFiles} counter={props.counter}
-                                    setCounter={props.setCounter}/>
-                <div className={styles.directoryLoadFoldersClass} onContextMenu={(e) => handleContextMenu(e)}>
 
-                    <DirectoryLoadFolders files={props.files} selectedItem={selectedItem}
-                                          setSelectedItem={setSelectedItem}
-                                          selectedEvent={selectedEvent} setSelectedEvent={setSelectedEvent}/>
+            props.files.map((item, index) =>
+                <>
+                    <div className={styles.directoryLoadFoldersClass} onContextMenu={(e) => handleContextMenu(e)}>
 
-                    {props.contextMenu.show && <ContextMenu x={props.contextMenu.x} y={props.contextMenu.y}
-                                                            setContextMenu={props.setContextMenu} files={props.files}
-                                                            setFiles={props.setFiles} target={target}/>}
-                </div>
+                        <DirectoryLoadFolders files={item} selectedItem={selectedItem}
+                                              setSelectedItem={setSelectedItem}
+                                              selectedEvent={selectedEvent} setSelectedEvent={setSelectedEvent}/>
 
-            </>
+                        {props.contextMenu.show && <ContextMenu x={props.contextMenu.x} y={props.contextMenu.y}
+                                                                setContextMenu={props.setContextMenu}
+                                                                files={item}
+                                                                setFiles={props.setFiles} target={target}/>}
+                    </div>
+
+                </>
+            )
+
         )
     }
-    return <DirectoryAddFolder files={props.files} setFiles={props.setFiles} counter={props.counter}
-                               setCounter={props.setCounter}/>
 
 
 };
@@ -54,10 +55,3 @@ DirectoryFolders.propTypes = {};
 DirectoryFolders.defaultProps = {};
 
 export default DirectoryFolders;
-
-
-//files={item}
-//                                                      itemName={item.name}
-//                                                      active={item.name === chosen}
-//                                                      onClick={() => setChosen(item.name)}
-//                                                      key={index}
