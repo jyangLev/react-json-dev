@@ -7,11 +7,8 @@ import axios from 'axios';
 
 const JsonRoot = () => {
 
-    // let [files, setFiles] = useState(()=> retrieveJsonStructure())  // This gets called twice on load ???/
-    let [files, setFiles] = useState(retrieveJsonStructure)  // This gets called twice on load ???/
 
     let [counter, setCounter] = useState(0);
-    //let response = setJsonStructure;
     let [selectedFile, setSelectedFile] = useState();
     const initialContextMenu = {
         show: false,
@@ -33,9 +30,8 @@ const JsonRoot = () => {
                         <div className='p-2 col background '>
                             {counter}
                             {/*{response}*/}
-                            <Directory files={files} setFiles={setFiles} counter={counter} setCounter={setCounter} contextMenu={contextMenu} setContextMenu={setContextMenu} />
-                            <button type="button" className="btn btn-success" onClick={setJsonStructure}>Call HTTP
-                            </button>
+                            <Directory counter={counter} setCounter={setCounter} contextMenu={contextMenu} setContextMenu={setContextMenu} />
+
 
                         </div>
                         <div className="p-2 col-10 background">
@@ -48,29 +44,29 @@ const JsonRoot = () => {
             </div>
         </div>
     )
+    //
+    // function retrieveJsonStructure() {
+    //     axios.post(process.env.REACT_APP_RETRIEVE_JSON_STRUCTURE_URL
+    //         , {
+    //             userTableId: "1",
+    //         }, 'Access-Control-Allow-Origin')
+    //         .then(function (response) {
+    //             console.log(response.data);
+    //             setFiles(response.data)
+    //             return response.data;
+    //         })
+    // }
+    //
 
-    function retrieveJsonStructure() {
-        axios.post(process.env.REACT_APP_RETRIEVE_JSON_STRUCTURE_URL
-            , {
-                userTableId: "1",
-            }, 'Access-Control-Allow-Origin')
-            .then(function (response) {
-                console.log(response.data);
-                setFiles(response.data)
-                return response.data;
-            })
-    }
-
-
-    function setJsonStructure() {
-        axios.post(process.env.REACT_APP_SET_JSON_STRUCTURE_URL, {
-            userTableId: "1",
-            jsonStructure: JSON.stringify(files)
-        }, 'Access-Control-Allow-Origin')
-            .then(function (response) {
-                console.log(response);
-            })
-    }
+    // function setJsonStructure() {
+    //     axios.post(process.env.REACT_APP_SET_JSON_STRUCTURE_URL, {
+    //         userTableId: "1",
+    //         jsonStructure: JSON.stringify(files)
+    //     }, 'Access-Control-Allow-Origin')
+    //         .then(function (response) {
+    //             console.log(response);
+    //         })
+    // }
 };
 
 JsonRoot.propTypes = {};

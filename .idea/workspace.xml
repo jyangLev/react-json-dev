@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="context menu properly closing when left-clicking anywhere on page">
+    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Folder Structure takes an array json object">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DirectoryLoadFolders/DirectoryLoadFolders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryLoadFolders/DirectoryLoadFolders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Directory/Directory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Directory/Directory.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672813383368</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Folder Structure takes an array json object">
+      <created>1673033064374</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1673033064374</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +257,8 @@
     <MESSAGE value="create proper request to save to file system controller" />
     <MESSAGE value="context menu functionality added when right clicking on folder structure" />
     <MESSAGE value="context menu properly closing when left-clicking anywhere on page" />
-    <option name="LAST_COMMIT_MESSAGE" value="context menu properly closing when left-clicking anywhere on page" />
+    <MESSAGE value="Folder Structure takes an array json object" />
+    <option name="LAST_COMMIT_MESSAGE" value="Folder Structure takes an array json object" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
