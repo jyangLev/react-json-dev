@@ -9,7 +9,7 @@ const DirectoryLoadFolders = (props) => {
     if (props.files != null && props.files.type === 'folder') {
         return (
             <div className={`folder ${styles.jeremyBtn}`}>
-                <div className="folder-title onclick" onClick={(event) => helperOnclick(event)}
+                <div id={props.files.id} className="folder-title onclick" onClick={(event) => helperOnclick(event)}
                      onDoubleClick={(event) => toggleExpanded(!isExpanded)}>
 
                     {isExpanded
@@ -18,6 +18,9 @@ const DirectoryLoadFolders = (props) => {
                     }
                     <Folder className={styles.iconGap} color="orange" size={14}/>
                     {props.files.name}
+
+
+
                 </div>
                 {
                     isExpanded && props.files.items.map((item, index) => <DirectoryLoadFolders files={item}
@@ -36,7 +39,7 @@ const DirectoryLoadFolders = (props) => {
     } else if (props.files != null && props.files.type === 'file') {
         return (
             <>
-                <div className={`file file-name onclick ${styles.jeremyBtn} `}
+                <div id={props.files.id} className={`file file-name onclick ${styles.jeremyBtn}  `}
                      onClick={(event) => helperOnclick(event, !isExpanded, true)}>
                     <FileText className={styles.iconGap} color="orange" size={14}/>
                     {props.files.name}</div>
