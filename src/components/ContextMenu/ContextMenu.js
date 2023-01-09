@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './ContextMenu.module.css';
 
-const ContextMenu = ({x, y, setContextMenu, files, setFiles, selectedItem}) => {
+const ContextMenu = ({x, y, setContextMenu, files, setFiles, selectedItem, setIsNewEntryModalOpen}) => {
 
+    // const [isModalOpen, setIsModalOpen] = useState(false);
 
     function onHover(e) {
         e.target.style.backgroundColor = '#cecece';
@@ -34,6 +35,11 @@ const ContextMenu = ({x, y, setContextMenu, files, setFiles, selectedItem}) => {
             if (jsonObj.type == 'folder') {
                 let obj = generateFileObj();
                 jsonObj.items[jsonObj.items.length] = obj;
+
+                // setIsModalOpen(true)
+                setIsNewEntryModalOpen(true)
+            } else {
+                // This is when a file is selected
             }
 
         } else if (jsonObj.items) {
@@ -43,6 +49,7 @@ const ContextMenu = ({x, y, setContextMenu, files, setFiles, selectedItem}) => {
         // Do Nothing if JsonObj is a file and has no match
 
     }
+
 
     function generateFileObj() {
         let obj = {
@@ -75,20 +82,29 @@ const ContextMenu = ({x, y, setContextMenu, files, setFiles, selectedItem}) => {
     }
 
     return (
-        <div className={styles.ContextMenu} style={{top: `${y}px`, left: `${x}px`}}
-             onClick={() => setContextMenu(false)}>
-            <ul className="list-group">
-                <li className={`list-group-item ${styles.ContextMenuItem}`} onMouseEnter={(e) => onHover(e)}
-                    onMouseLeave={(e) => onLeave(e)} onClick={(e) => createNewFile(e)}>New File
-                </li>
-                <li className={`list-group-item ${styles.ContextMenuItem}`} onMouseEnter={(e) => onHover(e)}
-                    onMouseLeave={(e) => onLeave(e)} onClick={(e) => createNewFolder(e)}>New Folder
-                </li>
-                <li className={`list-group-item ${styles.ContextMenuItem}`} onMouseEnter={(e) => onHover(e)}
-                    onMouseLeave={(e) => onLeave(e)} onClick={(e) => deleteItem(e)}>Delete
-                </li>
-            </ul>
+        <div>
+            <div className={styles.ContextMenu} style={{top: `${y}px`, left: `${x}px`}}
+                 onClick={() => setContextMenu(false)}>
+                <ul className="list-group">
+                    <li className={`list-group-item ${styles.ContextMenuItem}`} onMouseEnter={(e) => onHover(e)}
+                        onMouseLeave={(e) => onLeave(e)} onClick={(e) => createNewFile(e)}
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">New File
+                    </li>
+                    <li className={`list-group-item ${styles.ContextMenuItem}`} onMouseEnter={(e) => onHover(e)}
+                        onMouseLeave={(e) => onLeave(e)} onClick={(e) => createNewFolder(e)}>New Folder
+                    </li>
+                    <li className={`list-group-item ${styles.ContextMenuItem}`} onMouseEnter={(e) => onHover(e)}
+                        onMouseLeave={(e) => onLeave(e)} onClick={(e) => deleteItem(e)}>Delete
+                    </li>
+                </ul>
+                {/*<button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">*/}
+                {/*    Launch demo modal*/}
+                {/*</button>*/}
+
+            </div>
         </div>
+
     )
 };
 

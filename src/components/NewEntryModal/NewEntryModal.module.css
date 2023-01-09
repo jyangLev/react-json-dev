@@ -1,0 +1,36 @@
+.NewEntryModal {
+}
+
+.inputField {
+    border: none !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.inputField:focus{
+    color: #212529 !important;
+    background-color: #fff!important;
+    border-color: #26c77c !important;
+    outline: 0!important;
+    box-shadow: none !important;
+}
+
+.modalBody {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+.modalHeader {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    text-indent: 11em !important;
+}
+
+.modalFooter {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+.btnPrimary{
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+}

@@ -1,9 +1,7 @@
 import React, {useState} from 'react';
 import DirectoryFolders from "../DirectoryFolders/DirectoryFolders";
-import DirectoryAddFolder from "../DirectoryAddFolder/DirectoryAddFolder";
-import Test from "../Test/Test";
-import DirectoryLoadFolders from "../DirectoryLoadFolders/DirectoryLoadFolders";
 import axios from "axios";
+import NewEntryModal from "../NewEntryModal/NewEntryModal";
 
 const Directory = (props) => {
     let [files, setFiles] = useState(retrieveJsonStructure)  // This gets called twice on load ???/
@@ -17,6 +15,7 @@ const Directory = (props) => {
                               contextMenu={props.contextMenu} setContextMenu={props.setContextMenu}/>
             <button type="button" className="btn btn-success" onClick={setJsonStructure}>Call HTTP
             </button>
+            <NewEntryModal/>
         </div>
 
 
@@ -33,6 +32,7 @@ const Directory = (props) => {
                 return response.data;
             })
     }
+
     function setJsonStructure() {
         axios.post(process.env.REACT_APP_SET_JSON_STRUCTURE_URL, {
             userTableId: "1",

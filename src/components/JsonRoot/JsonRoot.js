@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import styles from './JsonRoot.module.css';
 import Directory from "../Directory/Directory";
 import JsonEditor from "../JsonEditor/JsonEditor";
-import axios from 'axios';
 
 
 const JsonRoot = () => {
@@ -29,10 +28,7 @@ const JsonRoot = () => {
                     <div className="row ">
                         <div className='p-2 col background '>
                             {counter}
-                            {/*{response}*/}
                             <Directory counter={counter} setCounter={setCounter} contextMenu={contextMenu} setContextMenu={setContextMenu} />
-
-
                         </div>
                         <div className="p-2 col-10 background">
                             <div className="mb-3">
@@ -44,29 +40,6 @@ const JsonRoot = () => {
             </div>
         </div>
     )
-    //
-    // function retrieveJsonStructure() {
-    //     axios.post(process.env.REACT_APP_RETRIEVE_JSON_STRUCTURE_URL
-    //         , {
-    //             userTableId: "1",
-    //         }, 'Access-Control-Allow-Origin')
-    //         .then(function (response) {
-    //             console.log(response.data);
-    //             setFiles(response.data)
-    //             return response.data;
-    //         })
-    // }
-    //
-
-    // function setJsonStructure() {
-    //     axios.post(process.env.REACT_APP_SET_JSON_STRUCTURE_URL, {
-    //         userTableId: "1",
-    //         jsonStructure: JSON.stringify(files)
-    //     }, 'Access-Control-Allow-Origin')
-    //         .then(function (response) {
-    //             console.log(response);
-    //         })
-    // }
 };
 
 JsonRoot.propTypes = {};

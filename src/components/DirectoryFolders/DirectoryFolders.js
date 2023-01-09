@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
-import {ChevronDown, ChevronRight, FileText, Folder} from "react-feather";
 import styles from "./DirectoryFolders.module.css";
 import DirectoryLoadFolders from "../DirectoryLoadFolders/DirectoryLoadFolders";
-import DirectoryAddFolder from "../DirectoryAddFolder/DirectoryAddFolder";
 import ContextMenu from "../ContextMenu/ContextMenu";
 
 const DirectoryFolders = (props) => {
@@ -10,6 +8,7 @@ const DirectoryFolders = (props) => {
     const [selectedItem, setSelectedItem] = useState();  // Should this contain the UUID? So that we can reference it?
     const [selectedEvent, setSelectedEvent] = useState();
     const [targetVal, setTargetVal] = useState()
+    const [isNewEntryModalOpen, setIsNewEntryModalOpen] = useState();
     const initialContextMenu = {
         show: false,
         x: 0,
@@ -39,9 +38,10 @@ const DirectoryFolders = (props) => {
                                                                 setContextMenu={props.setContextMenu}
                                                                 files={props.files}
                                                                 setFiles={props.setFiles}
-                                                                selectedItem={targetVal}/>}
+                                                                selectedItem={targetVal}
+                                                                setIsNewEntryModalOpen={setIsNewEntryModalOpen}
+                        />}
                     </div>
-
                 </>
             )
 
