@@ -7,20 +7,15 @@ const DirectoryFolders = (props) => {
 
     const [selectedItem, setSelectedItem] = useState();  // Should this contain the UUID? So that we can reference it?
     const [selectedEvent, setSelectedEvent] = useState();
-    const [targetVal, setTargetVal] = useState()
     const [isNewEntryModalOpen, setIsNewEntryModalOpen] = useState();
-    const initialContextMenu = {
-        show: false,
-        x: 0,
-        y: 0
-    }
+
 
     function handleContextMenu(e) {
         e.preventDefault();
         console.log(e.target)
         const {pageX, pageY} = e
         props.setContextMenu({show: true, x: pageX, y: pageY})
-        setTargetVal(e.target)
+        props.setTargetVal(e.target)
     }
 
     if (props.files && props.files.length > 0) {
@@ -38,8 +33,10 @@ const DirectoryFolders = (props) => {
                                                                 setContextMenu={props.setContextMenu}
                                                                 files={props.files}
                                                                 setFiles={props.setFiles}
-                                                                selectedItem={targetVal}
+                                                                selectedItem={props.targetVal}
                                                                 setIsNewEntryModalOpen={setIsNewEntryModalOpen}
+                                                                entryObj={props.entryObj}
+                                                                setEntryObj={props.setEntryObj}
                         />}
                     </div>
                 </>
