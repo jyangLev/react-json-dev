@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
 import styles from './ContextMenu.module.css';
-import NewEntryModal from "../NewEntryModal/NewEntryModal";
-import {createNewFile, createNewFolder} from "../../common/utils"
 
 const ContextMenu = ({
                          x,

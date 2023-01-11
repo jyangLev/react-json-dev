@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Modal opening on creation of new file">
+    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Creating new file under a folder properly appends to correct spot in json structure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ContextMenu/ContextMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContextMenu/ContextMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Directory/Directory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Directory/Directory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NewEntryModal/NewEntryModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewEntryModal/NewEntryModal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +110,9 @@
       <workItem from="1673202142576" duration="2277000" />
       <workItem from="1673217257355" duration="13753000" />
       <workItem from="1673294080817" duration="6851000" />
-      <workItem from="1673329982686" duration="2086000" />
+      <workItem from="1673329982686" duration="2274000" />
+      <workItem from="1673373176002" duration="51000" />
+      <workItem from="1673422105613" duration="1841000" />
     </task>
     <task id="LOCAL-00001" summary="readd .idea files">
       <created>1658180225739</created>
@@ -213,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673242612906</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Creating new file under a folder properly appends to correct spot in json structure">
+      <created>1673332245238</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1673332245238</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +296,8 @@
     <MESSAGE value="Fix: remove file states in root folder to prevent refreshes on text editor" />
     <MESSAGE value="New file will add hardcoded folder" />
     <MESSAGE value="Modal opening on creation of new file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modal opening on creation of new file" />
+    <MESSAGE value="Creating new file under a folder properly appends to correct spot in json structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating new file under a folder properly appends to correct spot in json structure" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -308,7 +315,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/NewEntryModal/NewEntryModal.js</url>
           <line>18</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

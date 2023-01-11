@@ -4,32 +4,18 @@ import ContextMenu from "../components/ContextMenu/ContextMenu";
  Returns epoch time in Milliseconds
  Only Generate when a new file is created
  **/
-export function createNewFile(e) {
-    // console.log('Creating new File')
-    // console.log(selectedItem.id)
-    // iterateJsonArray(files, selectedItem.id)
-}
-
-export function createNewFolder(e) {
-    // console.log('Created New Folder')
-    generateUniqueId();
-
-}
-
 export function generateUniqueId() {
 
     return Math.round(Date.now() / 100);
 }
 
-// Starting POINT
 export function iterateJsonArray(jsonArray, selectedId, entryObj) {
     for (let i = 0; i < jsonArray.length; i++) {
-        // Go into each json object
-        iterateJsonObject(jsonArray[i], selectedId, entryObj)
+        iterateJsonObject(jsonArray[i], selectedId, entryObj, jsonArray)
     }
 }
 
-export function iterateJsonObject(jsonObj, selectedId, entryObj) {
+export function iterateJsonObject(jsonObj, selectedId, entryObj, jsonArray) {
     if (jsonObj.id === selectedId) {
         // TODO need to find a way to break recursion when ID is found
         console.log("SUCESSS FOUND MATCHING ID !!!!!!!!!!")
@@ -38,8 +24,9 @@ export function iterateJsonObject(jsonObj, selectedId, entryObj) {
             // TODO below is how to manually add after last file
             jsonObj.items.push(entryObj)
 
-        } else {
-            // This is when a file is selected
+        } else if (jsonObj.type === 'file') {
+            jsonArray.push(entryObj)
+
         }
 
     } else if (jsonObj.items) {
