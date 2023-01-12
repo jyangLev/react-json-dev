@@ -1,28 +1,20 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styles from './ContextMenu.module.css';
 
 const ContextMenu = ({
                          x,
                          y,
                          setContextMenu,
-                         files,
-                         setFiles,
-                         selectedItem,
-                         setIsNewEntryModalOpen,
                          entryObj,
                          setEntryObj
                      }) => {
 
-    // const [isModalOpen, setIsModalOpen] = useState(false);
-
     function onHover(e) {
         e.target.style.backgroundColor = '#cecece';
     }
-
     function onLeave(e) {
         e.target.style.backgroundColor = '';
     }
-
     function selectEntryType(e) {
         console.log("Creating new Entry")
         if (e.target.id === 'newFile') {
@@ -40,7 +32,7 @@ const ContextMenu = ({
         }
     }
 
-    function deleteEntry(e) {
+    function deleteEntry() {
         console.log('Deleted Item')
     }
 

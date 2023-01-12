@@ -8,7 +8,6 @@ const JsonRoot = () => {
 
 
     let [counter, setCounter] = useState(0);
-    let [selectedFile, setSelectedFile] = useState();
     const initialContextMenu = {
         show: false,
         x: 0,
@@ -17,7 +16,11 @@ const JsonRoot = () => {
     const [contextMenu, setContextMenu] = useState(initialContextMenu)
 
     function closeContextMenu(){
-        setContextMenu(initialContextMenu)
+        if(contextMenu.show === true){
+            setContextMenu(initialContextMenu)
+        } else{
+            console.log("context is already closed")
+        }
     }
 
     return (

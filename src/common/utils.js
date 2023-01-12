@@ -1,4 +1,3 @@
-import ContextMenu from "../components/ContextMenu/ContextMenu";
 
 /**
  Returns epoch time in Milliseconds
@@ -10,12 +9,18 @@ export function generateUniqueId() {
 }
 
 export function iterateJsonArray(jsonArray, selectedId, entryObj) {
+    if(!selectedId){
+        // when entry is added at root level of structure
+        jsonArray.push(entryObj);
+        return;
+    }
     for (let i = 0; i < jsonArray.length; i++) {
         iterateJsonObject(jsonArray[i], selectedId, entryObj, jsonArray)
     }
 }
 
 export function iterateJsonObject(jsonObj, selectedId, entryObj, jsonArray) {
+
     if (jsonObj.id === selectedId) {
         // TODO need to find a way to break recursion when ID is found
         console.log("SUCESSS FOUND MATCHING ID !!!!!!!!!!")

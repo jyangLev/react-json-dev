@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import DirectoryFolders from "../DirectoryFolders/DirectoryFolders";
 import axios from "axios";
 import NewEntryModal from "../NewEntryModal/NewEntryModal";
+import style from "./Directory.module.css"
+import ContextMenu from "../ContextMenu/ContextMenu";
 
 const Directory = (props) => {
     let [files, setFiles] = useState(retrieveJsonStructure)  // This gets called twice on load ???/
@@ -14,10 +16,16 @@ const Directory = (props) => {
     const [entryObj, setEntryObj] = useState(initialEntryObj);
     const [targetVal, setTargetVal] = useState()
 
+    function handleContextMenu(e) {
+        e.preventDefault();
+        console.log(e.target)
+        const {pageX, pageY} = e
+        props.setContextMenu({show: true, x: pageX, y: pageY})
+        setTargetVal(e.target)
+    }
 
     return (
-
-        <div>
+        <div className={style.DirectoryFolders} onContextMenu={(e) => handleContextMenu(e)}>
             <DirectoryFolders files={files} setFiles={setFiles} counter={counter}
                               setCounter={setCounter}
                               contextMenu={props.contextMenu} setContextMenu={props.setContextMenu}
@@ -28,6 +36,14 @@ const Directory = (props) => {
             />
             <button type="button" className="btn btn-success" onClick={setJsonStructure}>Call HTTP
             </button>
+            {props.contextMenu.show && <ContextMenu x={props.contextMenu.x} y={props.contextMenu.y}
+                                                    setContextMenu={props.setContextMenu}
+                                                    files={files}
+                                                    setFiles={setFiles}
+                                                    selectedItem={targetVal}
+                                                    entryObj={entryObj}
+                                                    setEntryObj={setEntryObj}
+            />}
             <NewEntryModal files={files} setFiles={setFiles} entryObj={entryObj} setEntryObj={setEntryObj} targetVal={targetVal} setTargetVal={setTargetVal}/>
         </div>
 
