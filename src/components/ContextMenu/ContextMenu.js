@@ -12,17 +12,17 @@ const ContextMenu = ({
     function onHover(e) {
         e.target.style.backgroundColor = '#cecece';
     }
+
     function onLeave(e) {
         e.target.style.backgroundColor = '';
     }
+
     function selectEntryType(e) {
         console.log("Creating new Entry")
         if (e.target.id === 'newFile') {
             let tempObj = Object.assign({}, entryObj);
             tempObj.type = 'file';
             setEntryObj(tempObj);
-
-
         } else if (e.target.id === 'newFolder') {
             let tempObj = Object.assign({}, entryObj);
             tempObj.type = 'folder';
@@ -51,7 +51,10 @@ const ContextMenu = ({
                     </li>
                     <li className={`list-group-item ${styles.ContextMenuItem}`} id='newFolder'
                         onMouseEnter={(e) => onHover(e)}
-                        onMouseLeave={(e) => onLeave(e)} onClick={(e) => selectEntryType(e)}>New Folder
+                        onMouseLeave={(e) => onLeave(e)}
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                        onClick={(e) => selectEntryType(e)}>New Folder
                     </li>
                     <li className={`list-group-item ${styles.ContextMenuItem}`} onMouseEnter={(e) => onHover(e)}
                         onMouseLeave={(e) => onLeave(e)} onClick={(e) => deleteEntry(e)}>Delete

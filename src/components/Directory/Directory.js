@@ -7,11 +7,10 @@ import ContextMenu from "../ContextMenu/ContextMenu";
 
 const Directory = (props) => {
     let [files, setFiles] = useState(retrieveJsonStructure)  // This gets called twice on load ???/
-    let [counter, setCounter] = useState(0);
     let initialEntryObj = {
-        name:'initialName!!!',
-        type:'initialType!!!',
-        id:'initialId!!!!!'
+        name: 'initialName!!!',
+        type: 'initialType!!!',
+        id: 'initialId!!!!!'
     }
     const [entryObj, setEntryObj] = useState(initialEntryObj);
     const [targetVal, setTargetVal] = useState()
@@ -26,11 +25,8 @@ const Directory = (props) => {
 
     return (
         <div className={style.DirectoryFolders} onContextMenu={(e) => handleContextMenu(e)}>
-            <DirectoryFolders files={files} setFiles={setFiles} counter={counter}
-                              setCounter={setCounter}
+            <DirectoryFolders files={files} setFiles={setFiles}
                               contextMenu={props.contextMenu} setContextMenu={props.setContextMenu}
-                              entryObj={entryObj}
-                              setEntryObj={setEntryObj}
                               targetVal={targetVal}
                               setTargetVal={setTargetVal}
             />
@@ -44,7 +40,8 @@ const Directory = (props) => {
                                                     entryObj={entryObj}
                                                     setEntryObj={setEntryObj}
             />}
-            <NewEntryModal files={files} setFiles={setFiles} entryObj={entryObj} setEntryObj={setEntryObj} targetVal={targetVal} setTargetVal={setTargetVal}/>
+            <NewEntryModal files={files} setFiles={setFiles} entryObj={entryObj} setEntryObj={setEntryObj}
+                           targetVal={targetVal} setTargetVal={setTargetVal}/>
         </div>
 
     )

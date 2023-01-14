@@ -20,7 +20,6 @@ const DirectoryLoadFolders = (props) => {
                     {props.files.name}
 
 
-
                 </div>
                 {
                     isExpanded && props.files.items.map((item, index) => <DirectoryLoadFolders files={item}
@@ -51,7 +50,7 @@ const DirectoryLoadFolders = (props) => {
     function helperOnclick(event) {
         addHighlight(event)
         //TODO display file into editor using state????
-        if(event.target.classList.contains('file')){
+        if (event.target.classList.contains('file')) {
             console.log("A File was Selected!")
 
         }
