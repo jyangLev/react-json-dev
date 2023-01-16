@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/DirectoryRoot/DirectoryRoot.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/DirectoryRoot/DirectoryRoot.module.css" afterDir="false" />
+    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Ability to add folders">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContextMenu/ContextMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContextMenu/ContextMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Directory/Directory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Directory/Directory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DirectoryAddFolder/DirectoryAddFolder.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryAddFolder/DirectoryAddFolder.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DirectoryAddFolder/DirectoryAddFolder.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryAddFolder/DirectoryAddFolder.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DirectoryLoadFolders/DirectoryLoadFolders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryLoadFolders/DirectoryLoadFolders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewEntryModal/NewEntryModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewEntryModal/NewEntryModal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +118,7 @@
       <workItem from="1673556625326" duration="2159000" />
       <workItem from="1673595980459" duration="1715000" />
       <workItem from="1673726174751" duration="2936000" />
+      <workItem from="1673853365832" duration="513000" />
     </task>
     <task id="LOCAL-00001" summary="readd .idea files">
       <created>1658180225739</created>
@@ -342,7 +336,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/NewEntryModal/NewEntryModal.js</url>
-          <line>18</line>
+          <line>21</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

@@ -16,6 +16,9 @@ const NewEntryModal = (props) => {
         let tempEntryObj = Object.assign({}, props.entryObj);
         tempEntryObj.name = localName;
         tempEntryObj.id = generateUniqueId();
+        if(tempEntryObj.type == 'folder'){
+            tempEntryObj.items = [];
+        }
         props.setEntryObj(tempEntryObj);
 
         iterateJsonArray(props.files, props.targetVal.id, tempEntryObj)
