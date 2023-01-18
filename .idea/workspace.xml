@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Ability to add folders">
+    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="adding folder capability and expanding and collapsing on them">
+      <change afterPath="$PROJECT_DIR$/src/components/DirectoryFoldersLoad/DirectoryFoldersLoad.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DirectoryFoldersLoad/DirectoryFoldersLoad.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NewEntryModal/NewEntryModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewEntryModal/NewEntryModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DirectoryLoadFolders/DirectoryLoadFolders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryLoadFolders/DirectoryLoadFolders.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

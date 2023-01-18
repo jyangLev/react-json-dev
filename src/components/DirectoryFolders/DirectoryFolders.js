@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styles from "./DirectoryFolders.module.css";
 import DirectoryLoadFolders from "../DirectoryLoadFolders/DirectoryLoadFolders";
+import DirectoryFoldersLoad from "../DirectoryFoldersLoad/DirectoryFoldersLoad";
 
 const DirectoryFolders = (props) => {
 
@@ -15,9 +16,21 @@ const DirectoryFolders = (props) => {
                     {/*<div className={styles.directoryLoadFoldersClass} onContextMenu={(e) => handleContextMenu(e)}>*/}
                     <div className={styles.directoryLoadFoldersClass}>
 
-                        <DirectoryLoadFolders files={item} selectedItem={selectedItem}
+                        {/*<DirectoryLoadFolders files={item} selectedItem={selectedItem}*/}
+                        {/*                      setSelectedItem={setSelectedItem}*/}
+                        {/*                      selectedEvent={selectedEvent}*/}
+                        {/*                      setSelectedEvent={setSelectedEvent}*/}
+                        {/*                      isFirstElement={true}*/}
+
+                        {/*/>*/}
+                        
+                        <DirectoryFoldersLoad files={item} selectedItem={selectedItem}
                                               setSelectedItem={setSelectedItem}
-                                              selectedEvent={selectedEvent} setSelectedEvent={setSelectedEvent}/>
+                                              selectedEvent={selectedEvent}
+                                              setSelectedEvent={setSelectedEvent}
+                                              isFirstElement={true}
+
+                        />
 
                     </div>
                 </>

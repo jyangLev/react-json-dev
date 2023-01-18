@@ -1,0 +1,33 @@
+.DirectoryFoldersLoad {}
+
+.jeremyBtn {
+    cursor: default;
+    transition: none !important;
+    padding: 0;
+    text-align: left;
+}
+
+.fileContainer:not(:first-child) {
+    margin-left: 2VW !important;
+
+}
+
+.fileContainer:is(:first-child) {
+    margin-left: 1VW !important;
+
+}
+
+.iconGap{
+    margin-right: .2VW;
+
+}
+
+.container:not(:first-child){
+    margin-left: 1VW;
+}
+
+
+.folderTitle{
+
+}
+

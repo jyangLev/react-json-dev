@@ -9,7 +9,7 @@ const DirectoryLoadFolders = (props) => {
     if (props.files != null && props.files.type === 'folder') {
         return (
             <div className={`folder ${styles.jeremyBtn}`}>
-                <div id={props.files.id} className="folder-title onclick" onClick={(event) => helperOnclick(event)}
+                <div id={props.files.id} className="folder-title" onClick={(event) => helperOnclick(event)}
                      onDoubleClick={(event) => toggleExpanded(!isExpanded)}>
 
                     {isExpanded
