@@ -1,85 +1,64 @@
 import React, {useState} from 'react';
-import PropTypes from 'prop-types';
 import styles from './DirectoryFoldersLoad.module.css';
 import {ChevronDown, ChevronRight, FileText, Folder} from "react-feather";
+import {useDispatch, useSelector} from "react-redux";
+import {update, updateSelectedItem} from "../../redux/selectedItem";
 
 
 const DirectoryFoldersLoad = (props) => {
 
     let isExpanded = true;
+    const {selectedItem} = useSelector((state) => state.selectedItem);
+    const dispatch = useDispatch();
 
     if (props.files != null && props.files.type === 'folder') {
         return (
-            <div className={styles.container}>
-                {props.isFirstElement
-                    ? <div id={props.files.id} className={`folder-title first ${styles.folderTitle}`}
-                           onClick={(event) => helperOnclick(event)}
-                           onDoubleClick={(event) => toggleExpand(event)}>
-                        <div className={`folder ${styles.jeremyBtn}`}>
-
-
+            <div className={`sub-container ${styles.container}`}>
+                <div id={props.files.id} className={`folder-title second ${styles.folderTitle}`}
+                     onClick={(event) => onClickAction(event)}
+                     onDoubleClick={(event) => toggleExpand(event)}>
+                    <div className={`folder ${styles.jeremyBtn}`}>
+                        <div className='content'>
                             {isExpanded
                                 ? <ChevronDown className={styles.iconGap} color="black" size={14}/>
                                 : <ChevronRight className={`${styles.iconGap}`} color="black" size={14}/>
                             }
                             <Folder className={styles.iconGap} color="orange" size={14}/>
-                             {props.files.name}
-
-
+                            {props.files.name}
                         </div>
+
+                        {
+                            isExpanded && props.files.items.map((item, index) => <DirectoryFoldersLoad files={item}
+                                                                                                       highlightedEvent={props.highlightedEvent}
+                                                                                                       setHighlightedEvent={props.setHighlightedEvent}
+                                // itemName={item.name}
+                                // active={item.name === props.selectedItem}
+                                // onClick={() => props.setSelectedItem(item.name)}
+                                                                                                       key={index}
+                                // selectedItem={props.selectedItem}
+                                // setSelectedItem={props.setSelectedItem}
+                                // selectedEvent={props.selectedEvent}
+                                // setSelectedEvent={props.setSelectedEvent}
+                                                                                                       isFirstElement={false}
+
+                            />)
+                        }
+
                     </div>
-                    : <div id={props.files.id} className={`folder-title second ${styles.folderTitle}`}
-                           onClick={(event) => helperOnclick(event)}
-                           onDoubleClick={(event) => toggleExpand(event)}>
-                        <div className={`folder ${styles.jeremyBtn}`}>
+                </div>
 
-
-                            {isExpanded
-                                ? <ChevronDown className={styles.iconGap} color="black" size={14}/>
-                                : <ChevronRight className={`${styles.iconGap}`} color="black" size={14}/>
-                            }
-                            <Folder className={styles.iconGap} color="orange" size={14}/>
-                             {props.files.name}
-
-
-                        </div>
-                    </div>
-                }
-                {/*<div className={`folder ${styles.jeremyBtn}`}>*/}
-
-
-                {/*    {isExpanded*/}
-                {/*        ? <ChevronDown className={styles.iconGap} color="black" size={14}/>*/}
-                {/*        : <ChevronRight className={`${styles.iconGap}`} color="black" size={14}/>*/}
-                {/*    }*/}
-                {/*    <Folder className={styles.iconGap} color="orange" size={14}/>*/}
-                {/*     {props.files.name}*/}
-
-
-                {/*</div>*/}
-                {
-                    isExpanded && props.files.items.map((item, index) => <DirectoryFoldersLoad files={item}
-                                                                                               itemName={item.name}
-                                                                                               active={item.name === props.selectedItem}
-                                                                                               onClick={() => props.setSelectedItem(item.name)}
-                                                                                               key={index}
-                                                                                               selectedItem={props.selectedItem}
-                                                                                               setSelectedItem={props.setSelectedItem}
-                                                                                               selectedEvent={props.selectedEvent}
-                                                                                               setSelectedEvent={props.setSelectedEvent}
-                                                                                               isFirstElement={false}
-
-                    />)
-                }
             </div>
         )
     } else if (props.files != null && props.files.type === 'file') {
         return (
             <>
-                <div id={props.files.id} className={`${styles.container} file file-name onclick ${styles.jeremyBtn} ${styles.fileContainer}      `}
-                     onClick={(event) => helperOnclick(event, !isExpanded, true)}>
-                    <FileText className={styles.iconGap} color="orange" size={14}/>
-                    {props.files.name}</div>
+                <div className={`sub-container ${styles.container}`}>
+                    <div id={props.files.id}
+                         className={`${styles.container} file file-name onclick ${styles.jeremyBtn} ${styles.fileContainer}      `}
+                         onClick={(event) => onClickAction(event)}>
+                        <FileText className={styles.iconGap} color="orange" size={14}/>
+                        {props.files.name}</div>
+                </div>
             </>
         )
     }
@@ -89,7 +68,8 @@ const DirectoryFoldersLoad = (props) => {
         isExpanded = !isExpanded;
     }
 
-    function helperOnclick(event) {
+    function onClickAction(event) {
+        // console.log(name)
         addHighlight(event)
         //TODO display file into editor using state????
         if (event.target.classList.contains('file')) {
@@ -103,27 +83,31 @@ const DirectoryFoldersLoad = (props) => {
 
     function addHighlight(event) {
 
-        let highlightEvent = event.target;
+
+        //remove old highlight
+        removePreviousHighlight();
+
+        // Update new Highlight
+        updateNewHighlight(event);
 
         // This logic checks if you click on Chevron instead of the folder/file
-        if (!highlightEvent.classList.contains('folder-title') && !highlightEvent.classList.contains('file-name')) {
-            highlightEvent = highlightEvent.parentNode;
-        }
-
-
-        if (props.selectedEvent == null) {
-            props.setSelectedEvent(highlightEvent);
-        } else {
-            removeHighlightFolder(props.selectedEvent)
-            props.setSelectedEvent(highlightEvent);
-        }
+        // if (!highlightEvent.classList.contains('folder-title') && !highlightEvent.classList.contains('file-name')) {
+        //     highlightEvent = highlightEvent.parentNode;
+        // }
 
         // Apply Background Color
-        highlightEvent.style.background = 'gray';
     }
 
-    function removeHighlightFolder(selectedEvent) {
-        selectedEvent.style.background = '';
+    function removePreviousHighlight() {
+        if (selectedItem != null) {
+            selectedItem.target.style.background = '';
+        }
+    }
+
+    function updateNewHighlight(event) {
+        let highlightEvent = event.target;
+        highlightEvent.style.background = 'gray';
+        dispatch(updateSelectedItem(event));
     }
 
 

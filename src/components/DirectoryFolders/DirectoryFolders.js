@@ -5,8 +5,16 @@ import DirectoryFoldersLoad from "../DirectoryFoldersLoad/DirectoryFoldersLoad";
 
 const DirectoryFolders = (props) => {
 
+    let initHighlightedEvent = {
+        event: null
+    }
+
+    const[highlightedEvent, setHighlightedEvent] = useState(initHighlightedEvent);
+
     const [selectedItem, setSelectedItem] = useState();  // Should this contain the UUID? So that we can reference it?
     const [selectedEvent, setSelectedEvent] = useState();
+
+
 
     if (props.files && props.files.length > 0) {
         return (
@@ -25,6 +33,8 @@ const DirectoryFolders = (props) => {
                         {/*/>*/}
                         
                         <DirectoryFoldersLoad files={item} selectedItem={selectedItem}
+                                              highlightedEvent={highlightedEvent}
+                                              setHighlightedEvent={setHighlightedEvent}
                                               setSelectedItem={setSelectedItem}
                                               selectedEvent={selectedEvent}
                                               setSelectedEvent={setSelectedEvent}

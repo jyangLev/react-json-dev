@@ -4,6 +4,7 @@ import axios from "axios";
 import NewEntryModal from "../NewEntryModal/NewEntryModal";
 import style from "./Directory.module.css"
 import ContextMenu from "../ContextMenu/ContextMenu";
+import Test_RTK from "../Test_RTK/Test_RTK";
 
 const Directory = (props) => {
     let [files, setFiles] = useState(retrieveJsonStructure)  // This gets called twice on load ???/
@@ -25,6 +26,8 @@ const Directory = (props) => {
 
     return (
         <div className={style.DirectoryFolders} onContextMenu={(e) => handleContextMenu(e)}>
+            <Test_RTK/>
+
             <DirectoryFolders files={files} setFiles={setFiles}
                               contextMenu={props.contextMenu} setContextMenu={props.setContextMenu}
                               targetVal={targetVal}
