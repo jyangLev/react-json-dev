@@ -9,29 +9,18 @@ const DirectoryFolders = (props) => {
         event: null
     }
 
-    const[highlightedEvent, setHighlightedEvent] = useState(initHighlightedEvent);
+    const [highlightedEvent, setHighlightedEvent] = useState(initHighlightedEvent);
 
     const [selectedItem, setSelectedItem] = useState();  // Should this contain the UUID? So that we can reference it?
     const [selectedEvent, setSelectedEvent] = useState();
 
 
-
     if (props.files && props.files.length > 0) {
         return (
 
-            props.files.map((item) =>
-                <>
-                    {/*<div className={styles.directoryLoadFoldersClass} onContextMenu={(e) => handleContextMenu(e)}>*/}
+            props.files.map((item, index) =>
+                <div key={index}>
                     <div className={styles.directoryLoadFoldersClass}>
-
-                        {/*<DirectoryLoadFolders files={item} selectedItem={selectedItem}*/}
-                        {/*                      setSelectedItem={setSelectedItem}*/}
-                        {/*                      selectedEvent={selectedEvent}*/}
-                        {/*                      setSelectedEvent={setSelectedEvent}*/}
-                        {/*                      isFirstElement={true}*/}
-
-                        {/*/>*/}
-                        
                         <DirectoryFoldersLoad files={item} selectedItem={selectedItem}
                                               highlightedEvent={highlightedEvent}
                                               setHighlightedEvent={setHighlightedEvent}
@@ -39,11 +28,11 @@ const DirectoryFolders = (props) => {
                                               selectedEvent={selectedEvent}
                                               setSelectedEvent={setSelectedEvent}
                                               isFirstElement={true}
+                                              key={index}
 
                         />
-
                     </div>
-                </>
+                </div>
             )
 
         )

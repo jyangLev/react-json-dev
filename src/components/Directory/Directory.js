@@ -55,7 +55,7 @@ const Directory = (props) => {
                 userTableId: "1",
             }, 'Access-Control-Allow-Origin')
             .then(function (response) {
-                console.log(response.data);
+                // console.log(response.data);
                 setFiles(response.data)
                 return response.data;
             })
