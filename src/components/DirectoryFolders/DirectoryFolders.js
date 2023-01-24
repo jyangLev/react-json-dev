@@ -23,13 +23,12 @@ const DirectoryFolders = (props) => {
                     <div className={styles.directoryLoadFoldersClass}>
                         <DirectoryFoldersLoad files={item} selectedItem={selectedItem}
                                               highlightedEvent={highlightedEvent}
-                                              setHighlightedEvent={setHighlightedEvent}
-                                              setSelectedItem={setSelectedItem}
+                                              // setHighlightedEvent={setHighlightedEvent}
+                                              // setSelectedItem={setSelectedItem}
                                               selectedEvent={selectedEvent}
                                               setSelectedEvent={setSelectedEvent}
                                               isFirstElement={true}
                                               key={index}
-
                         />
                     </div>
                 </div>

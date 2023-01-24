@@ -4,25 +4,28 @@ import {generateUniqueId, iterateJsonArray} from "../../common/utils";
 
 const NewEntryModal = (props) => {
 
-    const[localName, setLocalName] = useState('');
+    const [localName, setLocalName] = useState('');
 
 
     function handleChange(e) {
-        setLocalName(e.target.value)
+        setLocalName(e.target.value);
+    }
+
+    function handleChangeSubmit(e) {
+        if (e.keyCode === 13) {
+            handleChange(e);
+        }
     }
 
     function saveNewEntry() {
-
         let tempEntryObj = Object.assign({}, props.entryObj);
         tempEntryObj.name = localName;
-        tempEntryObj.id = generateUniqueId();
-        if(tempEntryObj.type == 'folder'){
+        tempEntryObj.id = String(generateUniqueId());
+        if (tempEntryObj.type == 'folder') {
             tempEntryObj.items = [];
         }
         props.setEntryObj(tempEntryObj);
-
         iterateJsonArray(props.files, props.targetVal.id, tempEntryObj)
-
     }
 
     return (
@@ -42,11 +45,12 @@ const NewEntryModal = (props) => {
                                    placeholder="Name" onChange={(e) => handleChange(e)}/>
                         </div>
                         <div className={`modal-footer ${styles.modalFooter}`}>
-                            {/*<button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>*/}
-                            <button type="button" className={`btn btn-primary ${styles.btnPrimary}`}
+                            <button type="submit" className={`btn btn-primary ${styles.btnPrimary}`}
                                     data-bs-dismiss="modal"
                                     onClick={saveNewEntry}>Save
                             </button>
+
+
                         </div>
                     </div>
                 </div>

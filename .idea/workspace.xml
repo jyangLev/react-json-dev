@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Implement React Redux Toolkit and working highlight">
+    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/common/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContextMenu/ContextMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContextMenu/ContextMenu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Directory/Directory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Directory/Directory.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/DirectoryFoldersLoad/DirectoryFoldersLoad.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryFoldersLoad/DirectoryFoldersLoad.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DirectoryLoadFolders/DirectoryLoadFolders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryLoadFolders/DirectoryLoadFolders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NewEntryModal/NewEntryModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewEntryModal/NewEntryModal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +126,9 @@
       <workItem from="1674081943416" duration="8991000" />
       <workItem from="1674235188012" duration="4801000" />
       <workItem from="1674282785431" duration="4310000" />
-      <workItem from="1674491206696" duration="4989000" />
+      <workItem from="1674491206696" duration="17474000" />
+      <workItem from="1674548487144" duration="47000" />
+      <workItem from="1674588647649" duration="4131000" />
     </task>
     <task id="LOCAL-00001" summary="readd .idea files">
       <created>1658180225739</created>
@@ -254,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674028972689</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Refactor/Restructure Highlight feature">
+      <created>1674497195418</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1674497195418</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +344,8 @@
     <MESSAGE value="Creating new file on a file properly appends to correct spot in json structure" />
     <MESSAGE value="Able to create file at root level" />
     <MESSAGE value="Refactor: refactoring of folder structure and how they are created" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor: refactoring of folder structure and how they are created" />
+    <MESSAGE value="Refactor/Restructure Highlight feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor/Restructure Highlight feature" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -352,7 +362,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/components/NewEntryModal/NewEntryModal.js</url>
-          <line>21</line>
+          <line>26</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>

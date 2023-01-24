@@ -26,12 +26,10 @@ const Directory = (props) => {
 
     return (
         <div className={style.DirectoryFolders} onContextMenu={(e) => handleContextMenu(e)}>
-            <Test_RTK/>
+            {/*<Test_RTK/>*/}
 
             <DirectoryFolders files={files} setFiles={setFiles}
                               contextMenu={props.contextMenu} setContextMenu={props.setContextMenu}
-                              targetVal={targetVal}
-                              setTargetVal={setTargetVal}
             />
             <button type="button" className="btn btn-success" onClick={setJsonStructure}>Call HTTP
             </button>
@@ -39,7 +37,7 @@ const Directory = (props) => {
                                                     setContextMenu={props.setContextMenu}
                                                     files={files}
                                                     setFiles={setFiles}
-                                                    selectedItem={targetVal}
+                                                    targetVal={targetVal}
                                                     entryObj={entryObj}
                                                     setEntryObj={setEntryObj}
             />}

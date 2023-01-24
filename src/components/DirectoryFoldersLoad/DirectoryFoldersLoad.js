@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './DirectoryFoldersLoad.module.css';
 import {ChevronDown, ChevronRight, FileText, Folder} from "react-feather";
 import {useDispatch, useSelector} from "react-redux";
@@ -7,16 +7,18 @@ import {updateSelectedItem} from "../../redux/selectedItem";
 
 const DirectoryFoldersLoad = (props) => {
 
-    let isExpanded = true;
+    // let isExpanded = false;
+    const [isExpanded, setIsExpanded] = useState(false);
+
     const {selectedItem} = useSelector((state) => state.selectedItem);
     const dispatch = useDispatch();
 
     if (props.files != null && props.files.type === 'folder') {
         return (
-            <div id={props.files.id}
-                 className={`content-container folder ${styles.folderTitle} ${styles.container} ${styles.jeremyBtn}`}>
-                <div className='content' onClick={(event) => onClickAction(event)}
-                     onDoubleClick={(event) => toggleExpand(event)}>
+            <div
+                className={`content-container folder ${styles.folderTitle} ${styles.container} ${styles.jeremyBtn}`}>
+                <div id={props.files.id} className='content' onClick={(event) => onClickAction(event)}
+                     onDoubleClick={(event) => toggleExpand(!isExpanded)}>
                     {isExpanded
                         ? <ChevronDown className={styles.iconGap} color="black" size={14}/>
                         : <ChevronRight className={`${styles.iconGap}`} color="black" size={14}/>
@@ -27,8 +29,8 @@ const DirectoryFoldersLoad = (props) => {
 
                 {
                     isExpanded && props.files.items.map((item, index) => <DirectoryFoldersLoad files={item}
-                                                                                               highlightedEvent={props.highlightedEvent}
-                                                                                               setHighlightedEvent={props.setHighlightedEvent}
+                                                                                               // highlightedEvent={props.highlightedEvent}
+                                                                                               // setHighlightedEvent={props.setHighlightedEvent}
                                                                                                key={index}
                                                                                                isFirstElement={false}
                     />)
@@ -38,11 +40,10 @@ const DirectoryFoldersLoad = (props) => {
     } else if (props.files != null && props.files.type === 'file') {
         return (
             <>
-                <div id={props.files.id}
-                     className={`content-container file ${styles.container} ${styles.jeremyBtn} ${styles.fileContainer}`}
-                     onClick={(event) => onClickAction(event)}>
-                    <div className='content'>
-
+                <div
+                    className={`content-container file ${styles.container} ${styles.jeremyBtn} ${styles.fileContainer}`}
+                    onClick={(event) => onClickAction(event)}>
+                    <div id={props.files.id} className='content'>
                         <FileText className={styles.iconGap} color="orange" size={14}/>
                         {props.files.name}
                     </div>
@@ -51,24 +52,18 @@ const DirectoryFoldersLoad = (props) => {
         )
     }
 
-    function toggleExpand(e) {
-        // get e.target and display:none or display:block
-        isExpanded = !isExpanded;
+    function toggleExpand(value) {
+        setIsExpanded(value);
     }
 
     function onClickAction(event) {
-        // console.log(name)
         event.stopPropagation()
         addHighlight(event)
-        //TODO display file into editor using state????
+
         if (event.target.classList.contains('file')) {
             console.log("A File was Selected!")
-
         }
-        isExpanded = !isExpanded;
-
     }
-
 
     function addHighlight(event) {
         //remove old highlight

@@ -1,12 +1,15 @@
 import React from 'react';
 import styles from './ContextMenu.module.css';
+import {getMatchingJsonObj} from "../../common/utils";
 
 const ContextMenu = ({
                          x,
                          y,
+                         files,
                          setContextMenu,
                          entryObj,
-                         setEntryObj
+                         setEntryObj,
+                         targetVal
                      }) => {
 
     function onHover(e) {
@@ -32,10 +35,21 @@ const ContextMenu = ({
         }
     }
 
-    function deleteEntry() {
+    function deleteEntry(e) {
         console.log('Deleted Item')
-    }
+        let parent = getMatchingJsonObj(targetVal.id, files)
 
+        if (parent) {
+            for (const index in parent) {
+                if (parent[index].id === targetVal.id) {
+                    parent.splice(index, 1)
+                    // TODO Save To DB after removing element
+                }
+            }
+        } else {
+            console.error('Did not find any matching value for Deletion')
+        }
+    }
 
     return (
         <div>
