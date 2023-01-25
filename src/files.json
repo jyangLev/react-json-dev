@@ -1,54 +1,76 @@
-{
-  "name": "Root-Folder",
-  "type": "folder",
-  "id": "111",
-  "items": [
-    {
-      "name": "src-folder",
-      "type": "folder",
-      "id": "112",
-      "items": [
-        {
-          "name": "components-folder",
-          "type": "folder",
-          "id": "113",
-          "items": [
-            {
-              "name": "Checkbox-Folder",
-              "type": "folder",
-              "id": "114",
-              "items": []
-            },
-            {
-              "name": "Checkbox.jsx",
-              "type": "file",
-              "id": "115"
-            }
-          ]
-        },
-        {
-          "name": "pages-folder",
-          "type": "folder",
-          "id": "116",
-          "items": [
-            {
-              "name": "file1.jsx",
-              "type": "file",
-              "id": "117"
-            },
-            {
-              "name": "file2.jsx",
-              "type": "file",
-              "id": "118"
-            }
-          ]
-        },
-        {
-          "name": "file.css",
-          "type": "file",
-          "id": "119"
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "name": "root-folder",
+    "type": "folder",
+    "id": "111",
+    "items":
+    [
+      {
+        "name": "sub-folder",
+        "type": "folder",
+        "id": "112",
+        "items":
+        [
+          {
+            "name": "file1.css",
+            "type": "file",
+            "id": "113"
+          },
+          {
+            "name": "file2.css",
+            "type": "file",
+            "id": "114"
+          },
+          {
+            "name": "111",
+            "type": "file",
+            "id": "16744606875"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "root-folder-2",
+    "type": "folder",
+    "id": "555",
+    "items":
+    [
+      {
+        "name": "sub-folder-2",
+        "type": "folder",
+        "id": "556",
+        "items":
+        [
+          {
+            "name": "file3.css",
+            "type": "file",
+            "id": "557"
+          },
+          {
+            "name": "file4.css",
+            "type": "file",
+            "id": "558"
+          }
+        ]
+      },
+      {
+        "name": "newFile.txt",
+        "type": "file",
+        "id": "16733321893"
+      }
+    ]
+  },
+  {
+    "name": "root-file.js",
+    "type": "file",
+    "id": "16734944377"
+  },
+  {
+    "name": "root-folder-3",
+    "type": "folder",
+    "id": "16745913248",
+    "items":
+    []
+  }
+]

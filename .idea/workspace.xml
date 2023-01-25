@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContextMenu/ContextMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContextMenu/ContextMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Directory/Directory.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Directory/Directory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryFolders/DirectoryFolders.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DirectoryFoldersLoad/DirectoryFoldersLoad.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryFoldersLoad/DirectoryFoldersLoad.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NewEntryModal/NewEntryModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NewEntryModal/NewEntryModal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/files.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +123,8 @@
       <workItem from="1674282785431" duration="4310000" />
       <workItem from="1674491206696" duration="17474000" />
       <workItem from="1674548487144" duration="47000" />
-      <workItem from="1674588647649" duration="4131000" />
+      <workItem from="1674588647649" duration="5354000" />
+      <workItem from="1674633284619" duration="29000" />
     </task>
     <task id="LOCAL-00001" summary="readd .idea files">
       <created>1658180225739</created>
@@ -263,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674497195418</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Deletion Feature added">
+      <created>1674592912742</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1674592912742</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +348,8 @@
     <MESSAGE value="Able to create file at root level" />
     <MESSAGE value="Refactor: refactoring of folder structure and how they are created" />
     <MESSAGE value="Refactor/Restructure Highlight feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor/Restructure Highlight feature" />
+    <MESSAGE value="Deletion Feature added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deletion Feature added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
