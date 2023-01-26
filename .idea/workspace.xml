@@ -4,9 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="">
+    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="Update files.json with whats in DB.">
+      <change afterPath="$PROJECT_DIR$/src/components/Editor/Editor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Editor/Editor.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FileTabs/FileTabs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FileTabs/FileTabs.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/files.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JsonEditor/JSONEditorDemo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JsonEditor/JSONEditorDemo1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JsonEditor/JsonEditor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JsonEditor/JsonEditor.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/JsonRoot/JsonRoot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Test/Test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Test/Test.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TextEditor/TextEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TextEditor/TextEditor.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +138,9 @@
       <workItem from="1674491206696" duration="17474000" />
       <workItem from="1674548487144" duration="47000" />
       <workItem from="1674588647649" duration="5354000" />
-      <workItem from="1674633284619" duration="29000" />
+      <workItem from="1674633284619" duration="61000" />
+      <workItem from="1674682275882" duration="5816000" />
+      <workItem from="1674755499360" duration="1443000" />
     </task>
     <task id="LOCAL-00001" summary="readd .idea files">
       <created>1658180225739</created>
@@ -266,7 +282,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674592912742</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Update files.json with whats in DB.">
+      <created>1674633342252</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1674633342252</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,7 +372,8 @@
     <MESSAGE value="Refactor: refactoring of folder structure and how they are created" />
     <MESSAGE value="Refactor/Restructure Highlight feature" />
     <MESSAGE value="Deletion Feature added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deletion Feature added" />
+    <MESSAGE value="Update files.json with whats in DB." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update files.json with whats in DB." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

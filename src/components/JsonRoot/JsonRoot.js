@@ -1,14 +1,17 @@
 import React, {useState} from 'react';
 import styles from './JsonRoot.module.css';
-import Directory from "../Directory/Directory";
-import JsonEditor from "../JsonEditor/JsonEditor";
 import DirectoryRoot from "../DirectoryRoot/DirectoryRoot";
-import Test_RTK from "../Test_RTK/Test_RTK";
+
+
+import "ace-builds/src-noconflict/mode-java";
+import "ace-builds/src-noconflict/theme-github";
+import "ace-builds/src-noconflict/ext-language_tools";
+import Editor from "../Editor/Editor";
 
 
 const JsonRoot = () => {
-    return (
 
+    return (
         <div className={styles.JsonRoot}>
             <div>
                 <div className="container-fluid">
@@ -19,7 +22,7 @@ const JsonRoot = () => {
                         </div>
                         <div className="p-2 col-10 background">
                             <div className="mb-3">
-                                <JsonEditor></JsonEditor>
+                                <Editor/>
                             </div>
                         </div>
                     </div>

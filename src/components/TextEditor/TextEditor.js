@@ -2,54 +2,38 @@ import React, {useEffect, useRef} from "react";
 import JSONEditor from "jsoneditor";
 import "jsoneditor/dist/jsoneditor.css";
 import "./TextEditor.css";
+import AceEditor from "react-ace";
 
 const TextEditor = (props) => {
-    const containerRef = useRef(null);
-    const editorRef = useRef(null);
+    function onChange(newValue) {
+        console.log("change", newValue);
+    }
 
-    useEffect(() => {
-        // const options = { ...props };
-        const options = {
-            mode: 'code',
-            mainMenuBar: true,
-            statusBar: false,
-            onTextSelectionChange(start, end) {
-                // console.log(start)
-                // console.log(end)
-            },
-            colorPicker: true,
-            onBlur() {
-                // console.log("BLURRR");
-                // console.log(editorRef.current.getText());
-                // let currJsonBody =   editorRef.current.getText();
-                // let body = {
-                //     'hello':'goodMorning',
-                //     'jeremy':false
-                // }
+    function onLoad(newValue) {
 
+    }
 
-                // USE THIS TO UPDATE JSON
-                // props.onChangeJSON(currJsonBody);
-
-                // var formattedString = JSON.stringify(body);
-                // editorRef.current.setText(formattedString);
-
-            }
-        };
-
-        if (containerRef.current) {
-            editorRef.current = new JSONEditor(containerRef.current, options);
-            editorRef.current.set(props.jsonBody);
-        }
-
-        return () => {
-            if (editorRef.current) {
-                editorRef.current.destroy();
-            }
-        };
-    }, [containerRef, props.jsonBody, props]);
-
-    return <div ref={containerRef}/>;
+    return (<AceEditor
+        placeholder="Placeholder Text"
+        mode="java"
+        theme="xcode"
+        name="blah2"
+        onLoad={onLoad}
+        onChange={onChange}
+        fontSize={14}
+        showPrintMargin={true}
+        showGutter={true}
+        highlightActiveLine={true}
+        value={`function onLoad(editor) {
+  console.log("i've loaded");
+}`}
+        setOptions={{
+            enableBasicAutocompletion: false,
+            enableLiveAutocompletion: false,
+            enableSnippets: false,
+            showLineNumbers: true,
+            tabSize: 2,
+        }}/>)
 };
 
 TextEditor.propTypes = {};
