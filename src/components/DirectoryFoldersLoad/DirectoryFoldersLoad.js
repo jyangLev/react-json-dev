@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import styles from './DirectoryFoldersLoad.module.css';
 import {ChevronDown, ChevronRight, FileText, Folder} from "react-feather";
 import {useDispatch, useSelector} from "react-redux";
-import {updateSelectedItem} from "../../redux/selectedItem";
+import {updateSelectedEventItem} from "../../redux/selectedEventItem";
 
 
 const DirectoryFoldersLoad = (props) => {
@@ -10,7 +10,7 @@ const DirectoryFoldersLoad = (props) => {
     // let isExpanded = false;
     const [isExpanded, setIsExpanded] = useState(false);
 
-    const {selectedItem} = useSelector((state) => state.selectedItem);
+    const {selectedEventItem} = useSelector((state) => state.selectedEventItem);
     const dispatch = useDispatch();
 
     if (props.files != null && props.files.type === 'folder') {
@@ -87,14 +87,14 @@ const DirectoryFoldersLoad = (props) => {
     }
 
     function removePreviousHighlight() {
-        if (selectedItem != null) {
-            selectedItem.style.background = '';
+        if (selectedEventItem != null) {
+            selectedEventItem.style.background = '';
         }
     }
 
     function updateNewHighlight(target) {
         target.style.background = 'gray';
-        dispatch(updateSelectedItem(target));
+        dispatch(updateSelectedEventItem(target));
     }
 
 
