@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="integrate react-ace dependency">
-      <change afterPath="$PROJECT_DIR$/src/redux/selectedEventItem.js" afterDir="false" />
+    <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/DirectoryFoldersLoad/DirectoryFoldersLoad.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryFoldersLoad/DirectoryFoldersLoad.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/FileTabs/FileTabs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FileTabs/FileTabs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/selectedItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectedItem.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
     </list>
@@ -279,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674633342252</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Refactor name for event item">
+      <created>1675287417063</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1675287417063</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -363,7 +370,8 @@
     <MESSAGE value="Refactor/Restructure Highlight feature" />
     <MESSAGE value="Deletion Feature added" />
     <MESSAGE value="Update files.json with whats in DB." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update files.json with whats in DB." />
+    <MESSAGE value="Refactor name for event item" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor name for event item" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

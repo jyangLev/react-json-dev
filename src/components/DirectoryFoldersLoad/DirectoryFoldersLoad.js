@@ -3,6 +3,7 @@ import styles from './DirectoryFoldersLoad.module.css';
 import {ChevronDown, ChevronRight, FileText, Folder} from "react-feather";
 import {useDispatch, useSelector} from "react-redux";
 import {updateSelectedEventItem} from "../../redux/selectedEventItem";
+import {updateSelectedItem} from "../../redux/selectedItem";
 
 
 const DirectoryFoldersLoad = (props) => {
@@ -17,7 +18,7 @@ const DirectoryFoldersLoad = (props) => {
         return (
             <div
                 className={`content-container folder ${styles.folderTitle} ${styles.container} ${styles.jeremyBtn}`}>
-                <div id={props.files.id} className='content' onClick={(event) => onClickAction(event)}
+                <div id={props.files.id} className='content type_folder' onClick={(event) => onClickAction(event)}
                      onDoubleClick={(event) => toggleExpand(!isExpanded)}>
                     {isExpanded
                         ? <ChevronDown className={styles.iconGap} color="black" size={14}/>
@@ -43,7 +44,7 @@ const DirectoryFoldersLoad = (props) => {
                 <div
                     className={`content-container file ${styles.container} ${styles.jeremyBtn} ${styles.fileContainer}`}
                     onClick={(event) => onClickAction(event)}>
-                    <div id={props.files.id} className='content'>
+                    <div id={props.files.id} className='content type_file'>
                         <FileText className={styles.iconGap} color="orange" size={14}/>
                         {props.files.name}
                     </div>
@@ -95,6 +96,14 @@ const DirectoryFoldersLoad = (props) => {
     function updateNewHighlight(target) {
         target.style.background = 'gray';
         dispatch(updateSelectedEventItem(target));
+        if(target.classList.contains('type_file')){
+            let obj = {
+                id:target.id,
+                type:'file',
+                content:null
+            }
+            dispatch(updateSelectedItem(obj))
+        }
     }
 
 
