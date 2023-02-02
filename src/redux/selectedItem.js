@@ -1,5 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {retrieveFileContent, getContent} from "../common/HttpUtils";
+import {retrieveFileContent} from "../common/HttpUtils";
 
 export let selectedItemSlice = createSlice({
     name: "selectedItem",
@@ -24,14 +24,14 @@ export let selectedItemSlice = createSlice({
         },
     },
     extraReducers:{
-        [getContent.pending]: (state) =>{
+        [retrieveFileContent.pending]: (state) =>{
             console.log('==Pending')
         },
-        [getContent.fulfilled]: (state, action) =>{
+        [retrieveFileContent.fulfilled]: (state, action) =>{
             console.log('==SUCCESS')
             state.content = action.payload
         },
-        [getContent.rejected]: (state) =>{
+        [retrieveFileContent.rejected]: (state) =>{
             console.log('==REJECTED')
         }
 

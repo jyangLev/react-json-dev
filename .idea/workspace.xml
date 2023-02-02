@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b27beac-f5a9-4766-b370-769520fa680b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/common/HttpUtils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/HttpUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/HttpUtils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/DirectoryFoldersLoad/DirectoryFoldersLoad.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DirectoryFoldersLoad/DirectoryFoldersLoad.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/redux/selectedItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/selectedItem.js" afterDir="false" />
     </list>
@@ -293,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675289115271</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="WIP: CreateAsyncThunk for axios call returning data to redux store">
+      <created>1675320442164</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1675320442164</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,7 +385,8 @@
     <MESSAGE value="Update files.json with whats in DB." />
     <MESSAGE value="Refactor name for event item" />
     <MESSAGE value="on click, dynamically getting selected item in redux" />
-    <option name="LAST_COMMIT_MESSAGE" value="on click, dynamically getting selected item in redux" />
+    <MESSAGE value="WIP: CreateAsyncThunk for axios call returning data to redux store" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP: CreateAsyncThunk for axios call returning data to redux store" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

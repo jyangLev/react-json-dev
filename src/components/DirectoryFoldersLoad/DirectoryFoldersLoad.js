@@ -4,7 +4,7 @@ import {ChevronDown, ChevronRight, FileText, Folder} from "react-feather";
 import {useDispatch, useSelector} from "react-redux";
 import {updateSelectedEventItem} from "../../redux/selectedEventItem";
 import {updateSelectedItem} from "../../redux/selectedItem";
-import {getContent} from "../../common/HttpUtils";
+import {retrieveFileContent} from "../../common/HttpUtils";
 
 
 const DirectoryFoldersLoad = (props) => {
@@ -31,8 +31,8 @@ const DirectoryFoldersLoad = (props) => {
 
                 {
                     isExpanded && props.files.items.map((item, index) => <DirectoryFoldersLoad files={item}
-                                                                                               // highlightedEvent={props.highlightedEvent}
-                                                                                               // setHighlightedEvent={props.setHighlightedEvent}
+                        // highlightedEvent={props.highlightedEvent}
+                        // setHighlightedEvent={props.setHighlightedEvent}
                                                                                                key={index}
                                                                                                isFirstElement={false}
                     />)
@@ -97,14 +97,23 @@ const DirectoryFoldersLoad = (props) => {
     function updateNewHighlight(target) {
         target.style.background = 'gray';
         dispatch(updateSelectedEventItem(target));
-        if(target.classList.contains('type_file')){
+        if (target.classList.contains('type_file')) {
+            // Update id and type
             let obj = {
-                id:target.id,
-                type:'file',
-                content:null
+                id: target.id,
+                type: 'file',
+                content: null
             }
             dispatch(updateSelectedItem(obj))
-            dispatch(getContent())
+
+            // Update Content
+            let reqObj = {
+                url: process.env.REACT_APP_RETRIEVE_FILE_CONTENT,
+                reqBody: {
+                    id: target.id
+                }
+            }
+            dispatch(retrieveFileContent(reqObj))
             console.log('Finished Dispatching')
         }
     }
