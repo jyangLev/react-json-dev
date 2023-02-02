@@ -4,6 +4,7 @@ import {ChevronDown, ChevronRight, FileText, Folder} from "react-feather";
 import {useDispatch, useSelector} from "react-redux";
 import {updateSelectedEventItem} from "../../redux/selectedEventItem";
 import {updateSelectedItem} from "../../redux/selectedItem";
+import {getContent} from "../../common/HttpUtils";
 
 
 const DirectoryFoldersLoad = (props) => {
@@ -103,6 +104,8 @@ const DirectoryFoldersLoad = (props) => {
                 content:null
             }
             dispatch(updateSelectedItem(obj))
+            dispatch(getContent())
+            console.log('Finished Dispatching')
         }
     }
 
